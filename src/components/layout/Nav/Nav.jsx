@@ -46,14 +46,14 @@ const Nav = () => {
                 href="#"
                 className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] sm:w-auto"
               >
-                Get Started
+                About Us
               </a>
 
               <a
                 href="#"
                 className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-[#60AD02] shadow hover:text-[#068510] focus:outline-none focus:ring active:text-[#068510] sm:w-auto"
               >
-                Learn More
+                Contact Us
               </a>
             </div>
           </div>
