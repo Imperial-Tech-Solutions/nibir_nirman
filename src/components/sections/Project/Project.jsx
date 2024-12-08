@@ -37,8 +37,8 @@ const callouts = [
     href: '#',
   },
   {
-    name: 'JURONG ENGINEERING LTD, SINGAPORE / IHI CORPORATION, JAPAN',
-    description: 'Design, Supply and Site Installation of Local Staff and Worker Camp for JEL at Matarbari 2 x 600 MW ultrasuper Critical Power Plant',
+    name: 'MERIDIAN HOSPITALITY LIMITED',
+    description: 'Construction, of -1+23-Storied Building for MERIDIAN NOVOTEL AT CHITTAGONG Bangladesh. (Civil Work)',
     imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg',
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
@@ -72,6 +72,15 @@ const Projects = () => {
               </div>
             ))}
           </div>
+          <div className="mt-8 flex flex-wrap gap-4 text-center justify-center">
+              <a
+                href="#"
+                className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] sm:w-auto"
+              >
+                View More
+              </a>
+            </div>
+
         </div>
       </div>
     </div>
