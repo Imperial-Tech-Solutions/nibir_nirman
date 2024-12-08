@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
             <a
-              className="inline-block rounded-full bg-teal-600 p-2 text-white shadow transition hover:bg-teal-500 sm:p-3 lg:p-4"
+              className="inline-block rounded-full bg-[#60AD02] p-2 text-white shadow transition hover:bg-[#068510] sm:p-3 lg:p-4"
               href="#MainContent"
             >
               <span className="sr-only">Back to top</span>
@@ -69,16 +69,6 @@ const Footer = () => {
                 >
                   {" "}
                   Projects{" "}
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="#"
-                >
-                  {" "}
-                  Blog{" "}
                 </a>
               </li>
             </ul>
