@@ -1,24 +1,28 @@
 import React from "react";
+import exsaco_display from "../../../assets/Projects/exsaco/BuildingView.png";
+import soorty_display from "../../../assets/Projects/soorty/display.jpg";
+import paxar_display from "../../../assets/Projects/paxar/Building View 1.jpg";
+
 
 const callouts = [
   {
     name: 'EXSACO LTD.',
-    description: 'Construction, of 5- Storied Main Factory Building for EXSACO LIMITED at DAG No: SA/63,64,6 Mouza Domna & Dokkhin Baroibari Kashimpur, Gazipur Sadar, Dhaka Bangladesh. Total constructed area 501,601 sft including pavement, drain, Boundary all complete work',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-01.jpg',
+    description: 'Construction, of 5 Storied Main Factory Building for EXSACO LIMITED. Total constructed area 501,601 sft including pavement, drain, Boundary all complete work',
+    imageSrc: exsaco_display,
     imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
   {
     name: 'SROOTY TEXTILE LTD.',
     description: 'Construction of Two storied Factory Building with Mez.floor for SOORTY textile (BD) Ltd. at Comilla EPZ. Factory Building with steel structure erection work, all civil and finishing work, etp, Utility buildings covering area 3,75,000 sft',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg',
+    imageSrc: soorty_display,
     imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
     href: '#',
   },
   {
     name: 'PAXAR BANGLADESH LTD.',
     description: 'Construction, of 4 Storied Factory Building for PAXAR Bangladesh Ltd. At Dhaka EPZ.(Civil Work), Architectural Work',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg',
+    imageSrc: paxar_display,
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },

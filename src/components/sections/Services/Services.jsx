@@ -1,10 +1,11 @@
 import React from "react";
+import photo from "../../../assets/Projects/exsaco/BuildingView.png";
 
 const callouts = [
   {
     name: 'Desk and Office',
     description: 'Work from home accessories',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-01.jpg',
+    imageSrc: photo,
     imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
     href: '#',
   },
