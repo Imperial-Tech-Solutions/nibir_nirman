@@ -37,7 +37,7 @@ const Footer = () => {
               </div>
 
               <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-                Eminent Construction firm of Bangladesh since 1997.
+              Building Excellence, Shaping Futures: Nibir Nirman – Your Trusted Partner in Quality Construction Since 1997.
               </p>
             </div>
 

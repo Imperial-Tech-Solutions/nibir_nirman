@@ -38,21 +38,20 @@ const Nav = () => {
             </h1>
 
             <p className="mt-4 max-w-lg text-white sm:text-xl/relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
+            Building Excellence, Shaping Futures: Nibir Nirman – Your Trusted Partner in Quality Construction Since 1997.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4 text-center">
               <a
                 href="#"
-                className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] sm:w-auto"
               >
                 Get Started
               </a>
 
               <a
                 href="#"
-                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-[#60AD02] shadow hover:text-[#068510] focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+                className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-[#60AD02] shadow hover:text-[#068510] focus:outline-none focus:ring active:text-[#068510] sm:w-auto"
               >
                 Learn More
               </a>
