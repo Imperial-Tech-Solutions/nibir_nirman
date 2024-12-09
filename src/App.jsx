@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/layout/Header/Header";
 import Nav from "./components/layout/Nav/Nav";
+import Stats from "./components/sections/Stat/Stats";
 import Services from "./components/sections/Services/Services";
 import Projects from "./components/sections/Project/Project";
 import About from "./components/sections/About/About";
@@ -12,6 +13,7 @@ const App = () => {
     <div className="min-h-screen">
       <Header />
       <Nav />
+      <Stats />
 
       <main>
         <Services />
