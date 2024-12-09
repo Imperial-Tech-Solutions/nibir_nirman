@@ -2,6 +2,7 @@ import React from "react";
 import exsaco_display from "../../../assets/Projects/exsaco/BuildingView.png";
 import soorty_display from "../../../assets/Projects/soorty/display.jpg";
 import paxar_display from "../../../assets/Projects/paxar/Building View 1.jpg";
+import towa_display from "../../../assets/Projects/towa/display.png";
 
 
 const callouts = [
@@ -41,9 +42,9 @@ const callouts = [
     href: '#',
   },
   {
-    name: 'MERIDIAN HOSPITALITY LIMITED',
-    description: 'Construction, of -1+23-Storied Building for MERIDIAN NOVOTEL AT CHITTAGONG Bangladesh. (Civil Work)',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg',
+    name: 'TOWA Corporation',
+    description: 'Construction of 3-storied R.C.C factory Building with Mez. Floor for TOWA Personal Protective Device (BD). Ltd. At Ishwardi EPZ, Paksey Pabna. Total constructed area 1,50,000sqm. Of main factory build and others utility building.',
+    imageSrc: towa_display,
     imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
     href: '#',
   },
