@@ -3,35 +3,35 @@ import React, { useState } from "react";
 const Services = () => {
   const services = [
     {
-      title: "Installation, Testing & Commissioning",
+      title: "Industrial and Turnkey Project Solution",
       link: "#",
       image: "https://via.placeholder.com/800x600?text=Installation", // Replace with the actual image URL
       description:
         "We offer comprehensive installation, testing, and commissioning services to ensure your systems are fully operational and meet the highest standards.",
     },
     {
-      title: "Operations & Maintenance",
+      title: "Civil and Building Constructions",
       link: "#",
       image: "https://via.placeholder.com/800x600?text=Operations", // Replace with the actual image URL
       description:
         "Our operations and maintenance services provide end-to-end support to keep your systems running smoothly and efficiently.",
     },
     {
-      title: "Project & Contract Management",
+      title: "Architectural and Design Solution",
       link: "#",
       image: "https://via.placeholder.com/800x600?text=Project+Management", // Replace with the actual image URL
       description:
         "We specialize in project and contract management, ensuring your projects are delivered on time and within budget.",
     },
     {
-      title: "Bidding Consultancy",
+      title: "Telecommunication Infrastructure Developement",
       link: "#",
       image: "https://via.placeholder.com/800x600?text=Bidding", // Replace with the actual image URL
       description:
         "Our bidding consultancy services help you secure competitive contracts with expertly crafted proposals.",
     },
     {
-      title: "Supply & Trading",
+      title: "Irrigation and water resources",
       link: "#",
       image: "https://via.placeholder.com/800x600?text=Supply", // Replace with the actual image URL
       description:
