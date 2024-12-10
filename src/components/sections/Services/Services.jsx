@@ -1,57 +1,84 @@
-import React from "react";
-import photo from "../../../assets/Projects/exsaco/BuildingView.png";
-
-const callouts = [
-  {
-    name: 'Desk and Office',
-    description: 'Work from home accessories',
-    imageSrc: photo,
-    imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
-    href: '#',
-  },
-  {
-    name: 'Self-Improvement',
-    description: 'Journals and note-taking',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-02.jpg',
-    imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
-    href: '#',
-  },
-  {
-    name: 'Travel',
-    description: 'Daily commute essentials',
-    imageSrc: 'https://tailwindui.com/plus/img/ecommerce-images/home-page-02-edition-03.jpg',
-    imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-    href: '#',
-  },
-]
-
+import React, { useState } from "react";
 
 const Services = () => {
-  return (
-    <div className="bg-gray-100">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-          <h2 className="text-2xl font-bold text-gray-900">Collections</h2>
+  const services = [
+    {
+      title: "Installation, Testing & Commissioning",
+      link: "#",
+      image: "https://via.placeholder.com/800x600?text=Installation", // Replace with the actual image URL
+      description:
+        "We offer comprehensive installation, testing, and commissioning services to ensure your systems are fully operational and meet the highest standards.",
+    },
+    {
+      title: "Operations & Maintenance",
+      link: "#",
+      image: "https://via.placeholder.com/800x600?text=Operations", // Replace with the actual image URL
+      description:
+        "Our operations and maintenance services provide end-to-end support to keep your systems running smoothly and efficiently.",
+    },
+    {
+      title: "Project & Contract Management",
+      link: "#",
+      image: "https://via.placeholder.com/800x600?text=Project+Management", // Replace with the actual image URL
+      description:
+        "We specialize in project and contract management, ensuring your projects are delivered on time and within budget.",
+    },
+    {
+      title: "Bidding Consultancy",
+      link: "#",
+      image: "https://via.placeholder.com/800x600?text=Bidding", // Replace with the actual image URL
+      description:
+        "Our bidding consultancy services help you secure competitive contracts with expertly crafted proposals.",
+    },
+    {
+      title: "Supply & Trading",
+      link: "#",
+      image: "https://via.placeholder.com/800x600?text=Supply", // Replace with the actual image URL
+      description:
+        "We provide reliable supply and trading solutions to meet your business needs efficiently.",
+    },
+  ];
 
-          <div className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-            {callouts.map((callout) => (
-              <div key={callout.name} className="group relative">
-                <img
-                  alt={callout.imageAlt}
-                  src={callout.imageSrc}
-                  className="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square"
-                />
-                <h3 className="mt-6 text-sm text-gray-500">
-                  <a href={callout.href}>
-                    <span className="absolute inset-0" />
-                    {callout.name}
-                  </a>
-                </h3>
-                <p className="text-base font-semibold text-gray-900">{callout.description}</p>
-              </div>
-            ))}
-          </div>
+  const [activeIndex, setActiveIndex] = useState(0); // Default to the first service
+
+  const handleButtonClick = (index) => {
+    setActiveIndex(index); // Set the clicked button as active
+  };
+
+  return (
+    <div className="bg-white px-6 py-12 lg:py-20 lg:px-12 flex flex-col lg:flex-row gap-8">
+      {/* Left Section with Image and Description */}
+      <div className="lg:w-2/3">
+        <img
+          src={services[activeIndex].image}
+          alt={services[activeIndex].title}
+          className="w-full h-auto rounded"
+        />
+        <div className="mt-6">
+          <p className="text-gray-700 text-base leading-relaxed">
+            {services[activeIndex].description}
+          </p>
         </div>
+      </div>
+
+      {/* Right Section with List */}
+      <div className="lg:w-1/3">
+        <ul className="space-y-4">
+          {services.map((service, index) => (
+            <li key={index}>
+              <button
+                onClick={() => handleButtonClick(index)}
+                className={`block w-full rounded px-12 py-3 text-sm font-medium shadow focus:outline-none focus:ring transition-all duration-300 ${
+                  activeIndex === index
+                    ? "bg-[#60AD02] text-white active:bg-[#068510]" // Active button styles
+                    : "bg-gray-100 text-black hover:bg-gray-200" // Default button styles
+                }`}
+              >
+                {service.title}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
