@@ -24,7 +24,7 @@ const Stats = () => {
               Years in Business
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
               27+
             </dd>
           </div>
@@ -34,7 +34,7 @@ const Stats = () => {
               Completed Projects
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
               55+
             </dd>
           </div>
@@ -44,7 +44,7 @@ const Stats = () => {
               High-Value Project
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
               $4.6M+
             </dd>
           </div>
@@ -54,7 +54,7 @@ const Stats = () => {
               Skilled Workers
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
               1,100+
             </dd>
           </div>
