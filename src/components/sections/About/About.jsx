@@ -1,12 +1,11 @@
 import React from "react";
-import "./about.css";
 
 const About = () => {
   return (
     <div>
       <section className="bg-white py-12 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">About Us</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Know our Leaders</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-base">
             As a Web Development Services We are Committed to Building Custom
             Web Solutions that Drive Business Success.
