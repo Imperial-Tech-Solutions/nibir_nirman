@@ -6,17 +6,17 @@ const Footer = () => {
     <div>
       {/* Full view */}
       <footer className="bg-gray-100">
-        <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+        <div className="relative mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8 lg:pt-12">
           <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
             <a
-              className="inline-block rounded-full bg-[#60AD02] p-2 text-white shadow transition hover:bg-[#068510] sm:p-3 lg:p-4"
+              className="inline-block rounded-full bg-[#60AD02] p-2 text-white shadow transition hover:bg-[#068510] sm:p-2 lg:p-3"
               href="#"
             >
               <span className="sr-only">Back to top</span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-5"
+                className="size-4"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -35,19 +35,18 @@ const Footer = () => {
                 <img src={logo} alt="Meaningful text" />
               </div>
 
-              <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-              Building Excellence, Shaping Futures: Nibir Nirman – Your Trusted Partner in Quality Construction Since 1997.
+              <p className="mx-auto mt-4 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
+                Building Excellence, Shaping Futures: Nibir Nirman – Your Trusted Partner in Quality Construction Since 1997.
               </p>
             </div>
 
-            <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
+            <ul className="mt-8 flex flex-wrap justify-center gap-4 md:gap-6 lg:mt-0 lg:justify-end lg:gap-8">
               <li>
                 <a
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="#"
                 >
-                  {" "}
-                  About{" "}
+                  About
                 </a>
               </li>
 
@@ -56,8 +55,7 @@ const Footer = () => {
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="#"
                 >
-                  {" "}
-                  Services{" "}
+                  Services
                 </a>
               </li>
 
@@ -66,14 +64,13 @@ const Footer = () => {
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="#"
                 >
-                  {" "}
-                  Projects{" "}
+                  Projects
                 </a>
               </li>
             </ul>
           </div>
 
-          <p className="mt-12 text-center text-sm text-gray-500 lg:text-right">
+          <p className="mt-8 text-center text-sm text-gray-500 lg:text-right">
             Copyright &copy; 2024. All rights reserved.
           </p>
         </div>
