@@ -7,6 +7,7 @@ import Projects from "./components/sections/Project/Project";
 import About from "./components/sections/About/About";
 import Contact from "./components/sections/Contact/Contact";
 import Footer from "./components/layout/Footer/Footer";
+import AnimatedServices from "./components/sections/AnimatedServices/AnimatedServices";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Stats />
 
       <main>
+        <AnimatedServices />
         <Services />
         <Projects />
         <About />
