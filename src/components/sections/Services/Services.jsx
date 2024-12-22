@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import s1 from "../../../assets/s1.jpg";
 import s2 from "../../../assets/s2.jpg";
 import s3 from "../../../assets/s3.jpg";
-import s4 from "../../../assets/s3.jpg";
+import s4 from "../../../assets/s4.jpg";
 import s5 from "../../../assets/s5.jpg";
 
 
@@ -32,7 +32,7 @@ const Services = () => {
     {
       title: "Telecommunication Infrastructure Developement",
       link: "#",
-      image: "https://via.placeholder.com/800x600?text=Bidding", // Replace with the actual image URL
+      image: s4, // Replace with the actual image URL
       description:
         "Our bidding consultancy services help you secure competitive contracts with expertly crafted proposals.",
     },
