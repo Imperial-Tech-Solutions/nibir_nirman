@@ -1,4 +1,6 @@
 import React from "react";
+import director from "../../../assets/managing_director.png";
+import chairman from "../../../assets/chairman.png";
 
 const About = () => {
   return (
@@ -17,9 +19,9 @@ const About = () => {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/2">
               <img
-                src="/api/placeholder/400/300"
+                src={chairman}
                 alt="Our Mission"
-                className="rounded-lg shadow-lg w-full h-64 object-cover"
+                className="rounded-lg shadow-lg w-full object-cover"
               />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
@@ -41,9 +43,9 @@ const About = () => {
           <div className="flex flex-col md:flex-row-reverse items-center gap-8">
             <div className="w-full md:w-1/2">
               <img
-                src="/api/placeholder/400/300"
+                src={director}
                 alt="Our Values"
-                className="rounded-lg shadow-lg w-full h-64 object-cover"
+                className="rounded-lg shadow-lg w-full object-cover"
               />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
