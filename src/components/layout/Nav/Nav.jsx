@@ -50,7 +50,7 @@ const Nav = () => {
               </a>
 
               <a
-                href="#"
+                href="/ContactUs.html"
                 className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-[#60AD02] shadow hover:text-[#068510] focus:outline-none focus:ring active:text-[#068510] sm:w-auto"
               >
                 Contact Us
