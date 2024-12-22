@@ -5,7 +5,7 @@ const Nav = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -32,29 +32,33 @@ const Nav = () => {
           <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
             <h1 className="text-3xl font-extrabold text-white sm:text-5xl">
               If You Can Dream It
-              <strong className="block font-extrabold" style={{ color: '#60AD02' }}>
+              <strong
+                className="block font-extrabold"
+                style={{ color: "#60AD02" }}
+              >
                 We Can Build it.
               </strong>
             </h1>
 
             <p className="mt-4 max-w-lg text-white sm:text-xl/relaxed">
-              Building Excellence, Shaping Futures: Nibir Nirman – Your Trusted Partner in Quality Construction Since 1997.
+              Building Excellence, Shaping Futures: Nibir Nirman – Your Trusted
+              Partner in Quality Construction Since 1997.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4 text-center">
               <button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection("about")}
                 className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] sm:w-auto"
               >
                 About Us
               </button>
 
-              <button
-                onClick={() => scrollToSection('contact')}
+              <a
+                href="/ContactUs.html"
                 className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-[#60AD02] shadow hover:text-[#068510] focus:outline-none focus:ring active:text-[#068510] sm:w-auto"
               >
                 Contact Us
-              </button>
+              </a>
             </div>
           </div>
         </div>
