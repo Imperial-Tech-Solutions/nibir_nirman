@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import s1 from "../../../assets/s1.jpg";
+import s2 from "../../../assets/s2.jpg";
+import s3 from "../../../assets/s3.jpg";
+import s4 from "../../../assets/s3.jpg";
 import s5 from "../../../assets/s5.jpg";
+
 
 const Services = () => {
   const services = [
@@ -14,14 +18,14 @@ const Services = () => {
     {
       title: "Civil and Building Constructions",
       link: "#",
-      image: "https://via.placeholder.com/800x600?text=Operations", // Replace with the actual image URL
+      image: s2, // Replace with the actual image URL
       description:
         "Our operations and maintenance services provide end-to-end support to keep your systems running smoothly and efficiently.",
     },
     {
       title: "Architectural and Design Solution",
       link: "#",
-      image: "https://via.placeholder.com/800x600?text=Project+Management", // Replace with the actual image URL
+      image: s3, // Replace with the actual image URL
       description:
         "We specialize in project and contract management, ensuring your projects are delivered on time and within budget.",
     },
