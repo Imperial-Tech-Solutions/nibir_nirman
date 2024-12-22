@@ -48,7 +48,7 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <div className="sm:flex sm:gap-4">
             <a
-                href="#"
+                href="/ContactUs.html"
                 className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] sm:w-auto"
               >
                 Contact Us

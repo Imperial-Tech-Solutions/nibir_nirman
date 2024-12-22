@@ -86,7 +86,7 @@ const Projects = () => {
           </div>
           <div className="mt-8 flex flex-wrap gap-4 text-center justify-center">
             <a
-              href="#"
+              href="/Projects.html"
               className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] sm:w-auto"
             >
               View More
