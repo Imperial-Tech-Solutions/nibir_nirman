@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import s1 from "../../../assets/s1.jpg";
+import s5 from "../../../assets/s5.jpg";
 
 const Services = () => {
   const services = [
     {
       title: "Industrial and Turnkey Project Solution",
       link: "#",
-      image: "https://via.placeholder.com/800x600?text=Installation", // Replace with the actual image URL
+      image: s1, // Replace with the actual image URL
       description:
         "We offer comprehensive installation, testing, and commissioning services to ensure your systems are fully operational and meet the highest standards.",
     },
@@ -33,7 +35,7 @@ const Services = () => {
     {
       title: "Irrigation and water resources",
       link: "#",
-      image: "https://via.placeholder.com/800x600?text=Supply", // Replace with the actual image URL
+      image: s5, // Replace with the actual image URL
       description:
         "We provide reliable supply and trading solutions to meet your business needs efficiently.",
     },
