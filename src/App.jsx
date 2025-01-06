@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header/Header";
 import Nav from "./components/layout/Nav/Nav";
@@ -15,30 +16,71 @@ import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 const Home = () => {
   return (
     <>
-      <>
       <div id="stats">
-        <Stats />
+        <motion.div
+          initial={{ opacity: 0, transform: "translateY(20px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0)" }}
+          viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the section is visible
+          transition={{ duration: 1.2 }}
+        >
+          <Stats />
+        </motion.div>
       </div>
-      
+
       <main>
         <div id="services">
-          <AnimatedServices />
-          <Services />
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.2 }}
+          >
+            <AnimatedServices />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.2 }}
+          >
+            <Services />
+          </motion.div>
         </div>
-        
+
         <div id="projects">
-          <ProjectGrid />
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.2 }}
+          >
+            <ProjectGrid />
+          </motion.div>
         </div>
-        
+
         <div id="about">
-          <About />
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.2 }}
+          >
+            <About />
+          </motion.div>
         </div>
-        
+
         <div id="contact">
-          <Contact />
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.2 }}
+          >
+            <Contact />
+          </motion.div>
         </div>
       </main>
-    </>
     </>
   );
 };

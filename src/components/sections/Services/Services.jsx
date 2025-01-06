@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
 import s1 from "../../../assets/s1.jpg";
 import s2 from "../../../assets/s2.jpg";
 import s3 from "../../../assets/s3.jpg";
@@ -11,7 +12,7 @@ const Services = () => {
     {
       title: "Industrial and Turnkey Project Solution",
       link: "#",
-      image: s1, // Replace with your actual image paths
+      image: s1,
       description:
         "We offer comprehensive installation, testing, and commissioning services to ensure your systems are fully operational and meet the highest standards.",
     },
@@ -30,14 +31,14 @@ const Services = () => {
         "We specialize in project and contract management, ensuring your projects are delivered on time and within budget.",
     },
     {
-      title: "Telecommunication Infrastructure Developement",
+      title: "Telecommunication Infrastructure Development",
       link: "#",
       image: s4,
       description:
         "Our bidding consultancy services help you secure competitive contracts with expertly crafted proposals.",
     },
     {
-      title: "Irrigation and water resources",
+      title: "Irrigation and Water Resources",
       link: "#",
       image: s5,
       description:
@@ -56,18 +57,40 @@ const Services = () => {
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Left Section with Image and Description */}
         <div className="lg:w-2/3">
+          {/* Image with Fade-In/Out Effect */}
           <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-            <img
-              src={services[activeIndex].image}
-              alt={services[activeIndex].title}
-              className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300"
-            />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={services[activeIndex].image}
+                src={services[activeIndex].image}
+                alt={services[activeIndex].title}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </AnimatePresence>
           </div>
+
+          {/* Title and Description with Slide-In Effect */}
           <div className="mt-6">
-            <h3 className="text-xl font-semibold mb-3">{services[activeIndex].title}</h3>
-            <p className="text-gray-700 text-base leading-relaxed">
-              {services[activeIndex].description}
-            </p>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={services[activeIndex].title}
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: 50, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h3 className="text-xl font-semibold mb-3">
+                  {services[activeIndex].title}
+                </h3>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  {services[activeIndex].description}
+                </p>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
 
@@ -77,8 +100,10 @@ const Services = () => {
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <button
+                  <motion.button
                     onClick={() => handleButtonClick(index)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className={`group w-full rounded-lg px-6 py-4 text-left text-sm font-medium shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 ${
                       activeIndex === index
                         ? "bg-[#60AD02] text-white"
@@ -88,7 +113,7 @@ const Services = () => {
                     <div className="flex items-center justify-between">
                       <span className="line-clamp-2">{service.title}</span>
                     </div>
-                  </button>
+                  </motion.button>
                 </li>
               ))}
             </ul>
