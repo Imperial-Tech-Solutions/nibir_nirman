@@ -1,126 +1,67 @@
-import { motion, AnimatePresence } from "motion/react";
-import { useState } from "react";
-import s1 from "../../../assets/s1.jpg";
-import s2 from "../../../assets/s2.jpg";
-import s3 from "../../../assets/s3.jpg";
-import s4 from "../../../assets/s4.jpg";
-import s5 from "../../../assets/s5.jpg";
-
+import React from 'react';
+import backgroundPattern from '../../../assets/background-image.png'
 
 const Services = () => {
-  const services = [
-    {
-      title: "Industrial and Turnkey Project Solution",
-      link: "#",
-      image: s1,
-      description:
-        "We offer comprehensive installation, testing, and commissioning services to ensure your systems are fully operational and meet the highest standards.",
-    },
-    {
-      title: "Civil and Building Constructions",
-      link: "#",
-      image: s2,
-      description:
-        "Our operations and maintenance services provide end-to-end support to keep your systems running smoothly and efficiently.",
-    },
-    {
-      title: "Architectural and Design Solution",
-      link: "#",
-      image: s3,
-      description:
-        "We specialize in project and contract management, ensuring your projects are delivered on time and within budget.",
-    },
-    {
-      title: "Telecommunication Infrastructure Development",
-      link: "#",
-      image: s4,
-      description:
-        "Our bidding consultancy services help you secure competitive contracts with expertly crafted proposals.",
-    },
-    {
-      title: "Irrigation and Water Resources",
-      link: "#",
-      image: s5,
-      description:
-        "We provide reliable supply and trading solutions to meet your business needs efficiently.",
-    },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleButtonClick = (index) => {
-    setActiveIndex(index);
-  };
-
   return (
-    <div className="container mx-auto bg-white px-4 py-8 lg:py-16">
-      <div className="flex flex-col lg:flex-row gap-8">
-        {/* Left Section with Image and Description */}
-        <div className="lg:w-2/3">
-          {/* Image with Fade-In/Out Effect */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={services[activeIndex].image}
-                src={services[activeIndex].image}
-                alt={services[activeIndex].title}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </AnimatePresence>
-          </div>
-
-          {/* Title and Description with Slide-In Effect */}
-          <div className="mt-6">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={services[activeIndex].title}
-                initial={{ x: -50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: 50, opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h3 className="text-xl font-semibold mb-3">
-                  {services[activeIndex].title}
-                </h3>
-                <p className="text-gray-700 text-base leading-relaxed">
-                  {services[activeIndex].description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+    <section className="nibir-services relative w-full overflow-hidden bg-white">
+      {/* Hero Section */}
+      <div className="relative">
+        {/* Background pattern container - now limited to left half */}
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-[#F8FAFC]">
+          <img 
+            src={backgroundPattern} 
+            className="w-full h-full object-cover opacity-20 mix-blend-multiply filter brightness-150" 
+            alt="background pattern" 
+          />
         </div>
 
-        {/* Right Section with List */}
-        <div className="lg:w-1/3">
-          <div className="sticky top-24">
-            <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <motion.button
-                    onClick={() => handleButtonClick(index)}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`group w-full rounded-lg px-6 py-4 text-left text-sm font-medium shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 ${
-                      activeIndex === index
-                        ? "bg-[#60AD02] text-white"
-                        : "bg-gray-50 text-gray-900 hover:bg-gray-100"
-                    }`}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="line-clamp-2">{service.title}</span>
-                    </div>
-                  </motion.button>
-                </li>
-              ))}
-            </ul>
+        <div className="container mx-auto px-4 pt-16 pb-24 relative">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl mb-16 text-center">
+            <span className="text-black font-bold">Safety. Reliability.</span>{' '}
+            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-gray-500 to-[#60AD02]">Sustainability.</span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10">
+              <img
+                src="https://images.unsplash.com/photo-1626385785701-a0d3b879de2c?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Construction site"
+                className="w-full rounded-lg shadow-xl"
+              />
+            </div>
+
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-[#4A5568] mb-4">
+                  27 Years of Experience Building Bangladesh
+                </h3>
+                <p className="text-[#718096] mb-4">
+                  Nibir Nirman has been providing construction services to a long list of new and repeat clients since 1998. 
+                  We have been delivering exceptional construction services across residential, commercial, and industrial sectors.
+                </p>
+                <a href="/projects" className="text-[#60AD02] hover:text-[#4C8A02] underline">
+                  View our memorable projects →
+                </a>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-[#4A5568] mb-4">
+                  Tradition of Trust
+                </h3>
+                <p className="text-[#718096] mb-6">
+                  Through dedication, collaboration, customer satisfaction, and value creation, 
+                  Nibir Nirman has become a premier Bangladeshi builder driven by passion and 
+                  fueled by a team of committed professionals.
+                </p>
+                <button className="bg-[#60AD02] text-white px-6 py-3 rounded-lg hover:bg-[#4C8A02] transition-colors">
+                  Client experience →
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

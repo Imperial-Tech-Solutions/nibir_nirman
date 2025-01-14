@@ -13,65 +13,47 @@ const Stats = () => {
           <p className="mt-4 text-gray-500 sm:text-xl">
             With over 27 years of experience, Nibir Nirman has been delivering
             exceptional construction services across residential, commercial,
-            and industrial sectors. Our commitment to quality, innovation, and
-            reliability has earned the trust of top clients in Bangladesh and
-            beyond.
+            and industrial sectors.
           </p>
         </div>
 
-        <dl className="mt-6 grid grid-cols-1 gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transform transition duration-300 hover:scale-105">
-            <div className="mx-auto mb-4">
-              <Building2 size={40} className="text-[#60AD02]" />
+        <dl className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col rounded-lg bg-blue-50 px-6 py-4 text-center transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center gap-4">
+              <Building2 size={32} className="text-[#60AD02]" />
+              <dd className="text-4xl font-extrabold text-[#60AD02]">27+</dd>
             </div>
-            
-            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
-              27+
-            </dd>
-
-            <dt className="order-last text-lg font-medium text-gray-500 mt-2">
+            <dt className="text-lg font-medium text-gray-500 mt-1">
               Years in Business
             </dt>
           </div>
 
-          <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transform transition duration-300 hover:scale-105">
-            <div className="mx-auto mb-4">
-              <CheckCircle size={40} className="text-[#60AD02]" />
+          <div className="flex flex-col rounded-lg bg-blue-50 px-6 py-4 text-center transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center gap-4">
+              <CheckCircle size={32} className="text-[#60AD02]" />
+              <dd className="text-4xl font-extrabold text-[#60AD02]">55+</dd>
             </div>
-
-            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
-              55+
-            </dd>
-
-            <dt className="order-last text-lg font-medium text-gray-500 mt-2">
+            <dt className="text-lg font-medium text-gray-500 mt-1">
               Completed Projects
             </dt>
           </div>
 
-          <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transform transition duration-300 hover:scale-105">
-            <div className="mx-auto mb-4">
-              <DollarSign size={40} className="text-[#60AD02]" />
+          <div className="flex flex-col rounded-lg bg-blue-50 px-6 py-4 text-center transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center gap-4">
+              <DollarSign size={32} className="text-[#60AD02]" />
+              <dd className="text-4xl font-extrabold text-[#60AD02]">$4.6M+</dd>
             </div>
-
-            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
-              $4.6M+
-            </dd>
-
-            <dt className="order-last text-lg font-medium text-gray-500 mt-2">
+            <dt className="text-lg font-medium text-gray-500 mt-1">
               High-Value Project
             </dt>
           </div>
 
-          <div className="flex flex-col rounded-lg bg-blue-50 px-4 py-8 text-center transform transition duration-300 hover:scale-105">
-            <div className="mx-auto mb-4">
-              <Users size={40} className="text-[#60AD02]" />
+          <div className="flex flex-col rounded-lg bg-blue-50 px-6 py-4 text-center transform transition duration-300 hover:scale-105">
+            <div className="flex items-center justify-center gap-4">
+              <Users size={32} className="text-[#60AD02]" />
+              <dd className="text-4xl font-extrabold text-[#60AD02]">1,100+</dd>
             </div>
-
-            <dd className="text-4xl font-extrabold text-[#60AD02] md:text-5xl">
-              1,100+
-            </dd>
-
-            <dt className="order-last text-lg font-medium text-gray-500 mt-2">
+            <dt className="text-lg font-medium text-gray-500 mt-1">
               Skilled Workers
             </dt>
           </div>

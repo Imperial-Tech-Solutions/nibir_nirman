@@ -1,29 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import logo from "../../../assets/header_logo.png";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false); // Close mobile menu after clicking
+      setIsMobileMenuOpen(false);
     }
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm transition-all duration-300 ${
+        isScrolled ? 'shadow-md' : ''
+      }`}
+    >
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className={`flex items-center justify-between transition-all duration-300 ${
+          isScrolled ? 'h-14' : 'h-20'
+        }`}>
           <div className="md:flex md:items-center md:gap-12">
             <Link className="block text-teal-600" to="/">
               <img
                 src={logo}
                 alt="Meaningful text"
-                className="max-h-14 w-auto"
+                className={`w-auto transition-all duration-300 ${
+                  isScrolled ? 'max-h-10' : 'max-h-14'
+                }`}
               />
             </Link>
           </div>
@@ -65,7 +90,11 @@ const Header = () => {
             <div className="sm:flex sm:gap-4">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full rounded bg-[#60AD02] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] sm:w-auto"
+                className={`rounded bg-[#60AD02] text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] transition-all duration-300 ${
+                  isScrolled 
+                    ? 'px-8 py-2' 
+                    : 'px-12 py-3'
+                }`}
               >
                 Contact Us
               </button>
@@ -99,7 +128,10 @@ const Header = () => {
         <div
           className={`${
             isMobileMenuOpen ? "block" : "hidden"
-          } md:hidden absolute right-0 top-16 w-48 bg-white shadow-lg rounded-bl-lg`}
+          } md:hidden absolute right-0 w-48 bg-white shadow-lg rounded-bl-lg transition-all duration-300`}
+          style={{
+            top: isScrolled ? '3.5rem' : '5rem'
+          }}
         >
           <nav className="border-t border-gray-200">
             <ul className="flex flex-col py-2">

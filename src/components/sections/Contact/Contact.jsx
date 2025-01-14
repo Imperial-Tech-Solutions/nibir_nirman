@@ -1,53 +1,91 @@
 const Contact = () => {
-    return (
-      <section className="bg-white">
-        <div className="container px-6 py-12 mx-auto">
-          <div className="text-center">
-            <p className="font-medium text-[#60AD02]">Contact us</p>
-            <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl">Get in touch</h1>
-            <p className="mt-3 text-gray-500">Our friendly team would love to hear from you.</p>
+  return (
+    <section className="bg-white py-12">
+      <div className="container mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4 font-ibm-plex-serif">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-600 font-roboto-serif max-w-3xl mx-auto">
+            Visit us at our office or reach out through any of our contact channels below.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {/* Contact Information */}
+          <div className="bg-blue-50 rounded-xl h-[500px] flex flex-col p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 font-ibm-plex-serif">
+              Contact Information
+            </h2>
+
+            <div className="space-y-6 flex-1 flex flex-col justify-center">
+              {/* Location */}
+              <div className="flex items-start gap-3">
+                <div className="text-blue-600 shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 font-ibm-plex-serif">Our Location</h3>
+                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">
+                    Navana Yusuf Infinity Level 8,<br />
+                    16 ঢাকা, 1212, Bangladesh
+                  </p>
+                </div>
+              </div>
+
+              {/* Phone */}
+              <div className="flex items-start gap-3">
+                <div className="text-blue-600 shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 font-ibm-plex-serif">Phone</h3>
+                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">+1 (555) 123-4567</p>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start gap-3">
+                <div className="text-blue-600 shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 font-ibm-plex-serif">Email</h3>
+                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">contact@yourcompany.com</p>
+                </div>
+              </div>
+
+              {/* Business Hours */}
+              <div className="flex items-start gap-3">
+                <div className="text-blue-600 shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 font-ibm-plex-serif">Business Hours</h3>
+                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">
+                    Monday - Friday: 9:00 AM - 6:00 PM<br />
+                    Saturday: 10:00 AM - 2:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-  
-          <div className="max-w-8xl mx-auto grid grid-cols-1 gap-20 mt-10 sm:grid-cols-3">
-            <div className="text-center">
-              <span className="inline-block p-3 text-white rounded-full bg-[#60AD02]">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                </svg>
-              </span>
-              <h2 className="mt-4 text-base font-medium text-gray-800">Email</h2>
-              <p className="mt-2 text-sm text-gray-500">Our friendly team is here to help.</p>
-              <p className="mt-2 text-sm text-[#60AD02]">hello@merakiui.com</p>
-            </div>
-  
-            <div className="text-center">
-              <span className="inline-block p-3 text-white rounded-full bg-[#60AD02]">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </span>
-              <h2 className="mt-4 text-base font-medium text-gray-800">Office</h2>
-              <p className="mt-2 text-sm text-gray-500">Come say hello at our office HQ.</p>
-              <p className="mt-2 text-sm text-[#60AD02]">100 Smith Street Collingwood VIC 3066 AU</p>
-            </div>
-  
-            <div className="text-center">
-              <span className="inline-block p-3 text-white rounded-full bg-[#60AD02]">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                </svg>
-              </span>
-              <h2 className="mt-4 text-base font-medium text-gray-800">Phone</h2>
-              <p className="mt-2 text-sm text-gray-500">Mon-Fri from 8am to 5pm.</p>
-              <p className="mt-2 text-sm text-[#60AD02]">+1 (555) 000-0000</p>
-            </div>
-          </div>
-  
-          <div className="mt-12 max-w-8xl mx-auto h-72 md:h-96">
+
+          {/* Map */}
+          <div className="h-[500px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.055635220148!2d90.40223089999999!3d23.781033099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c74b0171f143%3A0xa8a37ccf21f70228!2sNIBIR%20NIRMAN!5e0!3m2!1sen!2sca!4v1733703240909!5m2!1sen!2sca"
-              className="w-full h-full rounded-lg"
+              className="w-full h-full rounded-xl"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -55,8 +93,9 @@ const Contact = () => {
             />
           </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default Contact;
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

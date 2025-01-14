@@ -35,15 +35,6 @@ const Home = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 1.2 }}
           >
-            <AnimatedServices />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, transform: "translateY(20px)" }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 1.2 }}
-          >
             <Services />
           </motion.div>
         </div>
