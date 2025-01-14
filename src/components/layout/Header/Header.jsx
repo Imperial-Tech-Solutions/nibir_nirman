@@ -90,7 +90,7 @@ const Header = () => {
             <div className="sm:flex sm:gap-4">
               <button
                 onClick={() => scrollToSection('contact')}
-                className={`rounded bg-[#60AD02] text-sm font-medium text-white shadow hover:bg-[#068510] focus:outline-none focus:ring active:bg-[#068510] transition-all duration-300 ${
+                className={`rounded bg-[#15803D] text-sm font-medium text-white shadow hover:bg-[#166534] focus:outline-none focus:ring active:bg-[#14532D] transition-all duration-300 ${
                   isScrolled 
                     ? 'px-8 py-2' 
                     : 'px-12 py-3'
@@ -102,7 +102,7 @@ const Header = () => {
 
             <div className="block md:hidden">
               <button
-                className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                className="rounded bg-[#15803D] p-2 text-white transition hover:bg-[#166534]"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle mobile menu"
               >
@@ -138,7 +138,7 @@ const Header = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('about')}
-                  className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-gray-50 transition"
+                  className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-[#15803D] hover:text-white transition"
                 >
                   About
                 </button>
@@ -147,7 +147,7 @@ const Header = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('services')}
-                  className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-gray-50 transition"
+                  className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-[#15803D] hover:text-white transition"
                 >
                   Services
                 </button>
@@ -156,7 +156,7 @@ const Header = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('projects')}
-                  className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-gray-50 transition"
+                  className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-[#15803D] hover:text-white transition"
                 >
                   Projects
                 </button>

@@ -87,13 +87,13 @@ const Nav = () => {
           <div className="flex flex-row gap-10">
             <button
               onClick={() => scrollToSection("about")}
-              className="bg-[#60AD02] text-white px-8 py-3 rounded-lg hover:bg-[#068510] transition-colors"
+              className="bg-[#15803D] text-white px-8 py-3 rounded-lg hover:bg-[#166534] transition-colors"
             >
               About Us
             </button>
             <a
               href="/ContactUs.html"
-              className="bg-white text-[#60AD02] px-8 py-3 rounded-lg hover:bg-slate-100 transition-colors"
+              className="bg-white text-[#15803D] px-8 py-3 rounded-lg hover:bg-slate-100 transition-colors"
             >
               Contact Us
             </a>
