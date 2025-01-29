@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // Corrected import for motion
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header/Header";
 import Nav from "./components/layout/Nav/Nav";
@@ -16,6 +16,7 @@ import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 const Home = () => {
   return (
     <>
+    <Nav />
       <div id="stats">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(20px)" }}
@@ -50,17 +51,6 @@ const Home = () => {
           </motion.div>
         </div>
 
-        <div id="about">
-          <motion.div
-            initial={{ opacity: 0, transform: "translateY(20px)" }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 1.2 }}
-          >
-            <About />
-          </motion.div>
-        </div>
-
         <div id="contact">
           <motion.div
             initial={{ opacity: 0, transform: "translateY(20px)" }}
@@ -76,14 +66,33 @@ const Home = () => {
   );
 };
 
+// About page component
+const AboutPage = () => {
+  return (
+    <>
+      <div id="about">
+        <motion.div
+          initial={{ opacity: 0, transform: "translateY(20px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0)" }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 1.2 }}
+        >
+          <About />
+        </motion.div>
+      </div>
+    </>
+  );
+};
+
 const App = () => {
   return (
     <BrowserRouter>
       <div className="min-h-screen">
         <Header />
-        <Nav />
+        
         <Routes>
-          <Route path="/*" element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />
       </div>

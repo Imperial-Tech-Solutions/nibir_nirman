@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import logo from "../../../assets/header_logo.png";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+
 
 const Header = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -57,12 +60,12 @@ const Header = () => {
             <nav aria-label="Global">
               <ul className="flex items-center gap-8 text-base">
                 <li>
-                  <button
-                    onClick={() => scrollToSection('about')}
-                    className="text-gray-500 transition hover:text-gray-500/75"
-                  >
-                    About
-                  </button>
+                <button
+      onClick={() => navigate("/about")} // Navigate to the /about route
+      className="text-gray-500 transition hover:text-gray-500/75"
+    >
+      About
+    </button>
                 </li>
 
                 <li>
