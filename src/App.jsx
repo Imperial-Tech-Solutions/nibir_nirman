@@ -11,6 +11,7 @@ import Contact from "./components/sections/Contact/Contact";
 import Footer from "./components/layout/Footer/Footer";
 import AnimatedServices from "./components/sections/AnimatedServices/AnimatedServices";
 import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
+import Discription from "./components/sections/Discription/Discription";
 
 // Home page component with all sections
 const Home = () => {
@@ -29,14 +30,14 @@ const Home = () => {
       </div>
 
       <main>
-        <div id="services">
+        <div id="discription">
           <motion.div
             initial={{ opacity: 0, transform: "translateY(20px)" }}
             whileInView={{ opacity: 1, transform: "translateY(0)" }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 1.2 }}
           >
-            <Services />
+            <Discription />
           </motion.div>
         </div>
 
@@ -48,6 +49,17 @@ const Home = () => {
             transition={{ duration: 1.2 }}
           >
             <ProjectGrid />
+          </motion.div>
+        </div>
+
+        <div id="services">
+          <motion.div
+            initial={{ opacity: 0, transform: "translateY(20px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0)" }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.2 }}
+          >
+            <Services />
           </motion.div>
         </div>
 
