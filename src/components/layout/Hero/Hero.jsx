@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Nav = () => {
+const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides = [
@@ -104,4 +104,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Hero;

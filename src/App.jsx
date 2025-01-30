@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion"; // Corrected import for motion
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header/Header";
-import Nav from "./components/layout/Nav/Nav";
+import Hero from "./components/layout/Hero/Hero";
 import Stats from "./components/sections/Stat/Stats";
 import Services from "./components/sections/Services/Services";
 import Projects from "./components/sections/Project/Project";
@@ -17,7 +17,7 @@ import Discription from "./components/sections/Discription/Discription";
 const Home = () => {
   return (
     <>
-    <Nav />
+    <Hero />
       <div id="stats">
         <motion.div
           initial={{ opacity: 0, transform: "translateY(20px)" }}
