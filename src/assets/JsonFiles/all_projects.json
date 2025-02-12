@@ -1,0 +1,100 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "Construction of 360 MW combined cycle power plant at Haripur",
+            "client": "HYUNDAI Engg. And Construction CO. of Korea",
+            "contract_value": "BDT 5,800,000.00",
+            "commencement": "Sep-1998",
+            "completion": "Mar-1999"
+        },
+        {
+            "id": 2,
+            "name": "3-Storied Residential Building for Prof. Ainun Nishatat Babar Road, Mohammedpur",
+            "client": "Prof. Ainun Nishat",
+            "contract_value": "BDT 4,200,000.00",
+            "commencement": "Jan-1999",
+            "completion": "Jul-1999"
+        },
+        {
+            "id": 3,
+            "name": "Factory Building for Neptune Cold Storage at Shirajdikhan, Munshigonj",
+            "client": "Neptune Cold Storage",
+            "contract_value": "BDT 18,000,000.00",
+            "commencement": "May-1999",
+            "completion": "Nov-2000"
+        },
+        {
+            "id": 4,
+            "name": "Construction of 6-storied factory Building for Haesong(Bd). Ltd.",
+            "client": "Haesong Corp Ltd. (Korean Investment)",
+            "contract_value": "BDT 290,000,000.00",
+            "commencement": "Jun-2004",
+            "completion": "Jul-2006"
+        },
+        {
+            "id": 5,
+            "name": "Construction of factory Building for Newtop textile Ltd.",
+            "client": "Newtop Textile Ltd. (Chinese Investment)",
+            "contract_value": "BDT 39,200,000.00",
+            "commencement": "May-2008",
+            "completion": "Nov-2008"
+        },
+        {
+            "id": 6,
+            "name": "Construction of Temporary Facilities and Batching Plant Foundation Works for Extension of Runway at Cox's Bazar Airport",
+            "client": "Bangladesh Civil Aviation / CYWEB-CCECC JV",
+            "contract_value": "BDT 76,126,520.00 (Excluding VAT & AIT)",
+            "commencement": "Mar-2021",
+            "completion": "Nov-2021"
+        },
+        {
+            "id": 7,
+            "name": "Construction of 4 Storied Factory Building for PAXAR Bangladesh Ltd.",
+            "client": "PAXAR Bangladesh Ltd / NIBIR NIRMAN",
+            "contract_value": "BDT 344,512,525.00",
+            "commencement": "May-2023",
+            "completion": "Sep-2024"
+        },
+        {
+            "id": 8,
+            "name": "CIVIL Construction of Dinajpur 132/33 Kv AIS Substation for PGCB",
+            "client": "PGCB / CCC ENGINEERING LTD, CHINA",
+            "contract_value": "BDT 175,139,048.00",
+            "commencement": "Apr-2022",
+            "completion": "Apr-2025"
+        },
+        {
+            "id": 9,
+            "name": "Construction of Industrial building Extension at Adamjee EPZ",
+            "client": "Superprotective Shoes / NIBIR NIRMAN",
+            "contract_value": "USD 2,165,694.00",
+            "commencement": "Jul-2023",
+            "completion": "Mar-2025"
+        },
+        {
+            "id": 10,
+            "name": "Civil Construction work of Shambhuganj 400/132/33 Kv AIS Substation",
+            "client": "PGCB / CCC ENGINEERING LTD, CHINA",
+            "contract_value": "BDT 514,135,890.00",
+            "commencement": "Apr-2023",
+            "completion": "Dec-2025"
+        },
+        {
+            "id": 11,
+            "name": "Construction of 132/33 KV GIS Sub-Station at Kalurghat, Chattogram",
+            "client": "ABB, India",
+            "contract_value": "BDT 107,500,000.00",
+            "commencement": "Jul-2019",
+            "completion": "Feb-2022"
+        },
+        {
+            "id": 12,
+            "name": "Civil Construction Work for Reliance 718 MW power Plant, Meghnaghat",
+            "client": "The Royal Utilisation Services Pvt. Ltd",
+            "contract_value": "BDT 69,561,021.00",
+            "commencement": "Jan-2022",
+            "completion": "May-2023"
+        }
+    ]
+}

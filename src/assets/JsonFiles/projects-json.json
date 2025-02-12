@@ -1,0 +1,297 @@
+{
+  "completedProjects": [
+    {
+      "id": 1,
+      "name": "Construction of 360 MW combined cycle power plant at Haripur",
+      "description": "Labour contract for building finishing works",
+      "client": "HYUNDAI Engg. And Construction CO. of Korea",
+      "contractValue": {
+        "amount": 5800000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "1998-09",
+        "completion": "1999-03"
+      }
+    },
+    {
+      "id": 2,
+      "name": "3-Storied Residential Building for Prof. Ainun Nishat",
+      "location": "Babar Road, Mohammedpur",
+      "client": "Prof. Ainun Nishat",
+      "contractValue": {
+        "amount": 4200000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "1999-01",
+        "completion": "1999-07"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Factory Building for Neptune Cold Storage",
+      "location": "Shirajdikhan, Munshigonj",
+      "client": "Neptune Cold Storage",
+      "contractValue": {
+        "amount": 18000000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "1999-05",
+        "completion": "2000-11"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Factory Building for Ratan Food Industries",
+      "location": "B.Baria",
+      "client": "Ratan Food Ltd",
+      "contractValue": {
+        "amount": 8500000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2000-08",
+        "completion": "2001-02"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Laboratory Building for Merchandise testing Laboratories",
+      "location": "Plot No. 130 (New), Dhaka EPZ",
+      "client": "MTL (Korean Investment)",
+      "contractValue": {
+        "amount": 15300000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2001-10",
+        "completion": "2002-04"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Construction of 460MW power plant at Meghnaghat",
+      "description": "Labour contract for Building finishing work",
+      "client": "HYUNDAI Engg. And Construction CO. of Korea",
+      "contractValue": {
+        "amount": 11500000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2001-11",
+        "completion": "2002-08"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Extension of factory Building for Haesong Corporation",
+      "location": "Baraipara, Kaliakoir",
+      "client": "Haesong Corporation (Korean Investment)",
+      "contractValue": {
+        "amount": 5600000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2002-03",
+        "completion": "2002-11"
+      }
+    },
+    {
+      "id": 8,
+      "name": "2-Storied storage cum office building for Hyopsin Ltd.",
+      "location": "Plot No. 86-90, Dhaka EPZ",
+      "client": "Hyopsin LTD (Korean Investment)",
+      "contractValue": {
+        "amount": 8400000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2002-05",
+        "completion": "2002-11"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Interior work for Woori Bank Head Office",
+      "location": "Navana Tower, Gulshan-1, Dhaka",
+      "client": "Woori Bank",
+      "contractValue": {
+        "amount": 4000000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2002-07",
+        "completion": "2002-09"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Ju-Houng Ind. Co. Ltd.",
+      "location": "Plot # 92-93, Dhaka EPZ",
+      "client": "Ju-Houng Ind. Co. Ltd. (Korean Investment)",
+      "contractValue": {
+        "amount": 3800000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2002-04",
+        "completion": "2002-09"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Sir-June (BD) Co. Ltd.",
+      "location": "Plot #103-104, Dhaka EPZ",
+      "client": "Sir-June (BD) Co. Ltd. (Korean Investment)",
+      "contractValue": {
+        "amount": 15800000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2003-07",
+        "completion": "2003-11"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Young – A Textile Ltd.",
+      "location": "Plot # East side of FS-SF 2 & 3, Dhaka EPZ",
+      "description": "Steel structure supplied by owner",
+      "client": "Young – A Textile Ltd. (Korean Investment)",
+      "contractValue": {
+        "amount": 16800000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2003-11",
+        "completion": "2004-04"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Construction of 3-storied factory Building for Haesong Korea Ltd.",
+      "location": "Bara Rangamatia, Zirabo, Savar, Dhaka",
+      "client": "Haesong Korea Ltd. (Korean Investment)",
+      "contractValue": {
+        "amount": 42000000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2004-04",
+        "completion": "2004-11"
+      }
+    },
+    {
+      "id": 14,
+      "name": "The Follow-up Cooperation Project for Improvement of MCHTI",
+      "client": "JICA (Japanese Aid)",
+      "contractValue": {
+        "amount": 2700000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2004-07",
+        "completion": "2004-09"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Construction of 6-storied factory Building for Haesong(Bd). Ltd.",
+      "location": "Baraipara, Kaliakair",
+      "description": "Total constructed area 390,000 sft. (RCC frame) with 7-storied foundation & one dyeing factory covering area 26,000 sft by pre fabricated steel structure with a two storied building covering area 40,000 sft",
+      "client": "Haesong Corp Ltd. (Korean Investment)",
+      "contractValue": {
+        "amount": 290000000.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2004-06",
+        "completion": "2006-07"
+      }
+    }
+  ],
+  "ongoingProjects": [
+    {
+      "id": 1,
+      "name": "CIVIL Construction of Dinajpur 132/33 Kv AIS Substation for PGCB",
+      "client": "PGCB / CCC ENGINEERING LTD, CHINA",
+      "contractValue": {
+        "amount": 175139048.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2022-04",
+        "expectedCompletion": "2025-04"
+      }
+    },
+    {
+      "id": 2,
+      "name": "CIVIL Construction of Pirgonj 132/33 Kv AIS Substation for PGCB",
+      "client": "PGCB/ CCC ENGINEERING LTD, CHINA",
+      "contractValue": {
+        "amount": 194811811.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2022-04",
+        "expectedCompletion": "2025-04"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Civil Construction work of Shambhuganj 400/132/33 Kv AIS Substation",
+      "client": "PGCB / CCC ENGINEERING LTD, CHINA",
+      "contractValue": {
+        "amount": 514135890.00,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2023-04",
+        "expectedCompletion": "2025-12"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Construction of Substation Building Lot 1 1-B-1 Narinda 132/33 Kb",
+      "description": "Under project of Expansion and strengthening of Power System Network under DPDC",
+      "client": "DPDC / TBEA Co. Ltd, China",
+      "contractValue": {
+        "amount": 309454741.51,
+        "currency": "BDT"
+      },
+      "timeline": {
+        "start": "2023-07",
+        "expectedCompletion": "2026-06"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Construction of Industrial building Extension at Adamjee EPZ",
+      "client": "Superprotective Shoes / NIBIR NIRMAN",
+      "contractValue": {
+        "amount": 2165694.00,
+        "currency": "USD"
+      },
+      "timeline": {
+        "start": "2023-07",
+        "expectedCompletion": "2025-03"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Drainage Work (Package-1) at Extension of Runway at Cox's Bazar Airport",
+      "client": "Bangladesh Civil Aviation / CYWEB-CCECC JV, China",
+      "contractValue": {
+        "amount": 57508060.00,
+        "currency": "BDT",
+        "note": "Excluding material cost"
+      },
+      "timeline": {
+        "start": "2023-10",
+        "expectedCompletion": "2025-06"
+      }
+    }
+  ]
+}
