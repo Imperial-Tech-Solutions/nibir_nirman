@@ -12,6 +12,8 @@ import Footer from "./components/layout/Footer/Footer";
 import AnimatedServices from "./components/sections/AnimatedServices/AnimatedServices";
 import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 import Discription from "./components/sections/Discription/Discription";
+import ProjectCard from "./components/sections/ProjectCard/ProjectCard";
+
 
 // Home page component with all sections
 const Home = () => {
@@ -105,6 +107,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/projects" element={<Projects/>} />
+          <Route path="/projectCard/:id/:title/:description" element={<ProjectCard />} />
         </Routes>
         <Footer />
       </div>
