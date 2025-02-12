@@ -3,21 +3,20 @@ import { HardHat, FileText, Truck, Wrench, Building, Ruler, Layers, Hammer } fro
 import backgroundPattern from "../../../assets/background-image.png";
 
 const servicesData = [
-  { title: "CIVIL CONSTRUCTION", icon: <Building size={40} className="text-blue-600" /> },
-  { title: "ELECTRO MECHANICAL ENGINEERING DESIGN", icon: <Wrench size={40} className="text-blue-600" /> },
-  { title: "PROJECT MANAGEMENT & PROPERTY DEVELOPMENT", icon: <FileText size={40} className="text-blue-600" /> },
-  { title: "HIRING OF MACHINERY & HEAVY VEHICLES", icon: <Truck size={40} className="text-blue-600" /> },
-  { title: "TURNKEY CONTRACTS", icon: <HardHat size={40} className="text-blue-600" /> },
-  { title: "DESIGN & BUILD CONTRACTS", icon: <Ruler size={40} className="text-blue-600" /> },
-  { title: "PILING SERVICES", icon: <Layers size={40} className="text-blue-600" /> },
-  { title: "STRUCTURAL ENGINEERING DESIGNS", icon: <Hammer size={40} className="text-blue-600" /> },
+  { title: "CIVIL CONSTRUCTION", icon: <Building size={40} className="text-[#15803D]" /> },
+  { title: "ELECTRO MECHANICAL ENGINEERING DESIGN", icon: <Wrench size={40} className="text-[#15803D]" /> },
+  { title: "PROJECT MANAGEMENT & PROPERTY DEVELOPMENT", icon: <FileText size={40} className="text-[#15803D]" /> },
+  { title: "HIRING OF MACHINERY & HEAVY VEHICLES", icon: <Truck size={40} className="text-[#15803D]" /> },
+  { title: "TURNKEY CONTRACTS", icon: <HardHat size={40} className="text-[#15803D]" /> },
+  { title: "DESIGN & BUILD CONTRACTS", icon: <Ruler size={40} className="text-[#15803D]" /> },
+  { title: "PILING SERVICES", icon: <Layers size={40} className="text-[#15803D]" /> },
+  { title: "STRUCTURAL ENGINEERING DESIGNS", icon: <Hammer size={40} className="text-[#15803D]" /> },
 ];
 
 const Services = () => {
   return (
     <section
-      className="py-12 bg-gray-100"
-      style={{ backgroundImage: `url(${backgroundPattern})`, backgroundSize: "cover" }}
+      className="py-12 bg-gray-100 font-['IBM_Plex_Serif'] font-weight[200]"
     >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">OUR SERVICES</h2>
