@@ -43,9 +43,12 @@ const Discription = () => {
                   Nibir Nirman has been providing construction services to a long list of new and repeat clients since 1998. 
                   We have been delivering exceptional construction services across residential, commercial, and industrial sectors.
                 </p>
-                <a href="/projects" className="text-[#60AD02] hover:text-[#4C8A02] underline">
-                  View our memorable projects →
-                </a>
+                <button
+            onClick={() => (window.location.href = "/projects")}
+            className="bg-green-600 hover:bg-green-700 text-white text-lg font-bold py-4 px-12 rounded-lg transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            View All Projects
+          </button>
               </div>
 
               <div>
@@ -57,9 +60,6 @@ const Discription = () => {
                   Nibir Nirman has become a premier Bangladeshi builder driven by passion and 
                   fueled by a team of committed professionals.
                 </p>
-                <button className="bg-[#60AD02] text-white px-6 py-3 rounded-lg hover:bg-[#4C8A02] transition-colors">
-                  Client experience →
-                </button>
               </div>
             </div>
           </div>
