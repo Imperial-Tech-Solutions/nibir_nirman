@@ -1,5 +1,6 @@
 import React from 'react';
 import backgroundPattern from '../../../assets/background-image.png'
+import vid from '../../../assets/output.mp4'
 
 const Discription = () => {
   return (
@@ -23,11 +24,14 @@ const Discription = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative z-10">
-              <img
-                src="https://images.unsplash.com/photo-1626385785701-a0d3b879de2c?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Construction site"
-                className="w-full rounded-lg shadow-xl"
-              />
+            <video 
+  src={vid} 
+  className="w-full rounded-lg shadow-xl" 
+  autoPlay 
+  loop 
+  muted
+/>
+
             </div>
 
             <div className="space-y-8">
