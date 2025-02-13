@@ -48,10 +48,16 @@ const About = () => {
         </div>
 
         {selectedLeader && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl text-center">
+          <div 
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" 
+            onClick={() => setSelectedLeader(null)}
+          >
+            <div 
+              className="bg-white p-6 rounded-lg shadow-lg max-w-2xl text-center relative" 
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
-                className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl"
                 onClick={() => setSelectedLeader(null)}
               >
                 &times;

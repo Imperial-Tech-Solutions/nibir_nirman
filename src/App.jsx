@@ -13,6 +13,7 @@ import AnimatedServices from "./components/sections/AnimatedServices/AnimatedSer
 import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 import Discription from "./components/sections/Discription/Discription";
 import ProjectCard from "./components/sections/ProjectCard/ProjectCard";
+import AboutNibirNirman from "./components/sections/About/AboutNibirNirman";
 
 
 // Home page component with all sections
@@ -91,6 +92,7 @@ const AboutPage = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1.2 }}
         >
+          <AboutNibirNirman/>
           <About />
         </motion.div>
       </div>
