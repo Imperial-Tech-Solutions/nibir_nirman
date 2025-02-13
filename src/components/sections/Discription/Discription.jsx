@@ -1,6 +1,6 @@
 import React from 'react';
 import backgroundPattern from '../../../assets/background-image.png'
-import vid from '../../../assets/output.mp4'
+
 
 const Discription = () => {
   return (
@@ -25,7 +25,7 @@ const Discription = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative z-10">
             <video 
-  src={vid} 
+  src="https://github.com/Imperial-Tech-Solutions/nibir_nirman/releases/download/videos/output.mp4"
   className="w-full rounded-lg shadow-xl" 
   autoPlay 
   loop 
