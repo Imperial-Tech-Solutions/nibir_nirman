@@ -1,30 +1,24 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const ProjectCard = ({
-  imageUrl,
-  title,
-  description,
-  onReadMore
-}) => {
+const ProjectCard = ({ imageUrl, title, description, onReadMore }) => {
   return (
-    <>
-      <motion.div
-      className="flex flex-col h-full w-full bg-white rounded-xl shadow-lg overflow-hidden"
-      whileHover={{ scale: 1.05 }} // Enlarge the card on hover
-      whileTap={{ scale: 0.98 }} // Shrink slightly on tap
-      transition={{ type: "spring", stiffness: 300, damping: 20 }} // Smooth spring effect
+    <motion.div
+      className="group flex flex-col h-80 w-full bg-white rounded-xl shadow-lg overflow-hidden hover:h-auto transition-all duration-500"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.98 }}
+      transition={{ type: "spring", stiffness: 200, damping: 25, duration: 0.6 }}
     >
       {/* Image Section with Zoom Effect */}
       <motion.div
         className="relative mx-4 mt-4 overflow-hidden text-white rounded-xl bg-blue-gray-500 shadow-lg shadow-blue-gray-500/40"
-        whileHover={{ scale: 1.1 }} // Slight zoom on hover
-        transition={{ duration: 0.4 }}
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.6 }}
       >
         <img
           src={imageUrl || "/api/placeholder/400/320"}
           alt={title}
-          className="w-full h-48 object-cover"
+          className="w-full h-40 object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
       </motion.div>
@@ -32,32 +26,33 @@ const ProjectCard = ({
       {/* Text and Description */}
       <div className="flex flex-col flex-grow p-6">
         <div className="flex-grow">
-          <h5 className="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900 mb-3">
+          <h5 className="text-center font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900 mb-3">
             {title}
           </h5>
-          <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-700">
-            {description}
-          </p>
+          {/* Description only visible on hover */}
+          <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 ease-in-out">
+            <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+              {description}
+            </p>
+          </div>
         </div>
 
-        {/* Button with Hover and Tap Animations */}
+        {/* Button only visible on hover */}
         <motion.div
-          className="pt-6"
-          whileHover={{ scale: 1.1 }} // Slightly enlarge the button
-          whileTap={{ scale: 0.95 }} // Shrink slightly on tap
-          transition={{ duration: 0.2 }}
+          className="hidden group-hover:block"
         >
-          <button
-            onClick={onReadMore}
-            className="block w-full select-none rounded-lg bg-gray-900 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-            type="button"
-          >
-            Read More
-          </button>
+          <div className="pt-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+            <button
+              onClick={onReadMore}
+              className="block w-full select-none rounded-lg bg-gray-900 py-3 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              type="button"
+            >
+              Read More
+            </button>
+          </div>
         </motion.div>
       </div>
     </motion.div>
-    </>
   );
 };
 
