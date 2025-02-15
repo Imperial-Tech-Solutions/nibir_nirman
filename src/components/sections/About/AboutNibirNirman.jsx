@@ -2,14 +2,16 @@ import React from "react";
 
 const AboutNibirNirman = () => {
   return (
-    <section className="bg-white py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-6 font-ibm-plex-serif">
-          About Nibir Nirman
-        </h2>
-        <div className="text-gray-700 max-w-3xl mx-auto text-lg font-roboto-serif leading-relaxed space-y-6">
+    <section className="bg-gray-50 py-20 px-6">
+      <div className="max-w-5xl mx-auto">
+        <header className="mb-12">
+          <h2 className="text-5xl font-extrabold text-gray-800 border-b-4 border-blue-600 inline-block pb-2">
+            About Nibir Nirman
+          </h2>
+        </header>
+        <div className="space-y-8 text-gray-700 text-lg leading-relaxed">
           <p>
-            Nibir Nirman is a leading construction firm in Bangladesh with a strong track record of successful projects. Established in 1997 by a group of experienced professionals in engineering and related fields, the company has been actively engaged in civil and building construction both locally and internationally for over eighteen years.
+            <span className="font-semibold text-gray-800">Nibir Nirman</span> is a leading construction firm in Bangladesh with a strong track record of successful projects. Established in 1997 by a group of experienced professionals in engineering and related fields, the company has been actively engaged in civil and building construction both locally and internationally for over eighteen years.
           </p>
           <p>
             The firm was founded to meet the growing demand for quality construction, particularly in collaboration with foreign investors, especially within the Export Processing Zones.
