@@ -92,7 +92,6 @@ const AboutPage = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1.2 }}
         >
-          <AboutNibirNirman/>
           <About />
         </motion.div>
       </div>
