@@ -1,7 +1,15 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const ProjectCard = ({ imageUrl, title, description, onReadMore }) => {
+const ProjectCard = ({ 
+  imageUrl, 
+  title, // Client Name
+  description, // Project Name
+  contractValue,
+  commencement,
+  completion,
+  onReadMore 
+}) => {
   return (
     <motion.div
       className="group flex flex-col h-80 w-full bg-white rounded-xl shadow-lg overflow-hidden hover:h-auto transition-all duration-500"
@@ -29,11 +37,20 @@ const ProjectCard = ({ imageUrl, title, description, onReadMore }) => {
           <h5 className="text-center font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900 mb-3">
             {title}
           </h5>
-          {/* Description only visible on hover */}
+          {/* Description and Details only visible on hover */}
           <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 ease-in-out">
-            <p className="block font-sans text-base antialiased font-light leading-relaxed text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-              {description}
-            </p>
+            <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+              <p className="block font-sans text-base antialiased font-medium leading-relaxed text-gray-800">
+                {description}
+              </p>
+              <div className="space-y-1 text-sm text-gray-600">
+                <p>Contract Value: {contractValue}</p>
+                <div className="flex justify-between text-xs">
+                  <span>Start: {commencement}</span>
+                  <span>End: {completion}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
