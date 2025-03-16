@@ -76,6 +76,9 @@ const Projects = () => {
                   imageUrl="/api/placeholder/400/320"
                   title={project.Client}
                   description={project["Project Name"]}
+                  contractValue={project["Contract Value"]}
+                  commencement={project.Commencement}
+                  completion={project.Completion}
                   onReadMore={() => handleReadMore(project)}
                 />
               ))}
