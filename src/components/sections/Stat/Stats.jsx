@@ -40,7 +40,6 @@ const Stats = () => {
 
           <div className="flex flex-col rounded-lg bg-blue-50 px-6 py-4 text-center transform transition duration-300 hover:scale-105">
             <div className="flex items-center justify-center gap-4">
-              <DollarSign size={32} className="text-[#60AD02]" />
               <dd className="text-4xl font-extrabold text-[#60AD02]">100</dd>
             </div>
             <dt className="text-lg font-medium text-gray-500 mt-1">
