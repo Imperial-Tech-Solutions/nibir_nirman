@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
+
 
 const ProjectCard = ({ 
+  key,
   imageUrl, 
   title, // Client Name
   description, // Project Name
@@ -10,6 +13,8 @@ const ProjectCard = ({
   completion,
   onReadMore 
 }) => {
+  const navigate = useNavigate(); // Ensure this is inside the function component
+
   return (
     <motion.div
       className="group flex flex-col h-80 w-full bg-white rounded-xl shadow-lg overflow-hidden hover:h-auto transition-all duration-500"
@@ -59,11 +64,11 @@ const ProjectCard = ({
           className="hidden group-hover:block"
         >
           <div className="pt-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
-            <button
-              onClick={onReadMore}
-              className="block w-full select-none rounded-lg bg-gray-900 py-3 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-            >
+      <button
+        onClick={() => navigate(`/projectCard/${key}`)}
+        className="block w-full select-none rounded-lg bg-gray-900 py-3 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+        type="button"
+      >
               Read More
             </button>
           </div>
