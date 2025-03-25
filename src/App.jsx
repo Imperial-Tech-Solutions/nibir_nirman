@@ -14,6 +14,7 @@ import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 import Discription from "./components/sections/Discription/Discription";
 import ProjectCard from "./components/sections/ProjectCard/ProjectCard";
 import AboutNibirNirman from "./components/sections/About/AboutNibirNirman";
+import IndividualProject from "./components/sections/Project/IndividualProject";
 
 
 // Home page component with all sections
@@ -109,7 +110,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<Projects/>} />
-          <Route path="/projectCard/:id" element={<ProjectCard />} />
+          <Route path="/projectCard/:id" element={<IndividualProject />} />
         </Routes>
         <Footer />
       </div>
