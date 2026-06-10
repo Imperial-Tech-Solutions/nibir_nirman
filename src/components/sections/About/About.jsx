@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import director from "../../../assets/managing_director.png";
 import chairman from "../../../assets/chairman.png";
 import nav_picture from "../../../assets/nav_picture.png";
@@ -7,6 +8,27 @@ import about2 from "../../../assets/about2.jpg";
 
 const About = () => {
   const [selectedLeader, setSelectedLeader] = useState(null);
+
+  useEffect(() => {
+    if (!selectedLeader) {
+      return undefined;
+    }
+
+    const originalOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSelectedLeader(null);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedLeader]);
 
   const leaders = [
     {
@@ -119,35 +141,53 @@ const About = () => {
           ))}
         </div>
 
-        {selectedLeader && (
-  <div
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
-    onClick={() => setSelectedLeader(null)}
-  >
-    <div
-      className="bg-white p-6 rounded-lg shadow-lg relative w-[90%] max-w-lg h-auto overflow-y-auto max-h-[90vh]"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl"
-        onClick={() => setSelectedLeader(null)}
-      >
-        &#x2715;
-      </button>
-      <img
-        src={selectedLeader.image}
-        alt={selectedLeader.name}
-        className="rounded-lg shadow-xl w-full object-cover mb-4"
-      />
-      <h3 className="text-2xl font-semibold text-gray-900 font-ibm-plex-serif">
-        {selectedLeader.name}
-      </h3>
-      <p className="text-gray-700 text-lg font-roboto-serif leading-relaxed mt-4">
-        {selectedLeader.description}
-      </p>
-    </div>
-  </div>
-)}
+        {selectedLeader &&
+          typeof document !== "undefined" &&
+          createPortal(
+            <div
+              className="fixed inset-0 z-[70] overflow-y-auto bg-black/60 px-4 py-24 sm:px-6 sm:py-10"
+              onClick={() => setSelectedLeader(null)}
+            >
+              <div className="flex min-h-full items-start justify-center sm:items-center">
+                <div
+                  className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-white shadow-2xl"
+                  onClick={(event) => event.stopPropagation()}
+                >
+                  <button
+                    type="button"
+                    className="absolute right-4 top-4 z-10 rounded-full bg-white/90 px-3 py-1 text-2xl text-gray-600 shadow-sm transition hover:text-gray-900"
+                    onClick={() => setSelectedLeader(null)}
+                    aria-label={`Close ${selectedLeader.name} details`}
+                  >
+                    &#x2715;
+                  </button>
+
+                  <div className="grid md:grid-cols-[minmax(0,320px)_1fr]">
+                    <div className="bg-gray-100">
+                      <img
+                        src={selectedLeader.image}
+                        alt={selectedLeader.name}
+                        className="h-72 w-full object-cover md:h-full"
+                      />
+                    </div>
+
+                    <div className="max-h-[calc(100vh-8rem)] overflow-y-auto p-6 sm:p-8">
+                      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#15803D]">
+                        Leadership Profile
+                      </p>
+                      <h3 className="mt-3 text-3xl font-semibold text-gray-900 font-ibm-plex-serif">
+                        {selectedLeader.name}
+                      </h3>
+                      <p className="mt-5 text-lg leading-relaxed text-gray-700 font-roboto-serif">
+                        {selectedLeader.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>,
+            document.body
+          )}
 
 
 
