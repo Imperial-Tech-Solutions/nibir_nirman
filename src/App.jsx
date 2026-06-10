@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/layout/Header/Header";
 import Hero from "./components/layout/Hero/Hero";
 import Stats from "./components/sections/Stat/Stats";
@@ -12,6 +12,28 @@ import Footer from "./components/layout/Footer/Footer";
 import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 import Discription from "./components/sections/Discription/Discription";
 import IndividualProject from "./components/sections/Project/IndividualProject";
+import { scrollToSection } from "./utils/sectionNavigation";
+
+const ScrollToHash = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname !== "/" || !location.hash) {
+      return;
+    }
+
+    const sectionId = location.hash.slice(1);
+    const animationFrameId = window.requestAnimationFrame(() => {
+      scrollToSection(sectionId);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+    };
+  }, [location.hash, location.pathname]);
+
+  return null;
+};
 
 
 // Home page component with all sections
@@ -100,6 +122,7 @@ const AboutPage = () => {
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <div className="min-h-screen">
         <Header />
         

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../assets/header_logo.png";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-
+import {
+  getSectionNavigationTarget,
+  scrollToSection,
+} from "../../../utils/sectionNavigation";
 
 const Header = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -25,12 +28,21 @@ const Header = () => {
     };
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+  const handleSectionNavigation = (sectionId) => {
+    const navigationTarget = getSectionNavigationTarget(location.pathname, sectionId);
+
+    if (navigationTarget.type === "scroll") {
+      scrollToSection(sectionId);
+    } else {
+      navigate(navigationTarget.to);
     }
+
+    setIsMobileMenuOpen(false);
+  };
+
+  const handlePageNavigation = (path) => {
+    navigate(path);
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -59,17 +71,17 @@ const Header = () => {
             <nav aria-label="Global">
               <ul className="flex items-center gap-8 text-base">
                 <li>
-                <button
-      onClick={() => navigate("/about")} // Navigate to the /about route
-      className="text-gray-500 transition hover:text-gray-500/75"
-    >
-      About
-    </button>
+                  <button
+                    onClick={() => handlePageNavigation("/about")}
+                    className="text-gray-500 transition hover:text-gray-500/75"
+                  >
+                    About
+                  </button>
                 </li>
 
                 <li>
                   <button
-                    onClick={() => scrollToSection('services')}
+                    onClick={() => handleSectionNavigation("services")}
                     className="text-gray-500 transition hover:text-gray-500/75"
                   >
                     Services
@@ -78,7 +90,7 @@ const Header = () => {
 
                 <li>
                   <button
-                    onClick={() => navigate("/projects")}
+                    onClick={() => handlePageNavigation("/projects")}
                     className="text-gray-500 transition hover:text-gray-500/75"
                   >
                     Projects
@@ -91,7 +103,7 @@ const Header = () => {
           <div className="flex items-center gap-6">
             <div className="sm:flex sm:gap-4">
               <button
-                onClick={() => scrollToSection('contact')}
+                onClick={() => handleSectionNavigation("contact")}
                 className={`rounded bg-[#15803D] text-sm font-medium text-white shadow hover:bg-[#166534] focus:outline-none focus:ring active:bg-[#14532D] transition-all duration-300 ${
                   isScrolled 
                     ? 'px-8 py-2' 
@@ -139,7 +151,7 @@ const Header = () => {
             <ul className="flex flex-col py-2">
               <li>
                 <button
-                  onClick={() => scrollToSection('about')}
+                  onClick={() => handlePageNavigation("/about")}
                   className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-[#15803D] hover:text-white transition"
                 >
                   About
@@ -148,7 +160,7 @@ const Header = () => {
 
               <li>
                 <button
-                  onClick={() => scrollToSection('services')}
+                  onClick={() => handleSectionNavigation("services")}
                   className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-[#15803D] hover:text-white transition"
                 >
                   Services
@@ -157,7 +169,7 @@ const Header = () => {
 
               <li>
                 <button
-                  onClick={() => scrollToSection('projects')}
+                  onClick={() => handlePageNavigation("/projects")}
                   className="block w-full px-4 py-2 text-left text-gray-500 hover:bg-[#15803D] hover:text-white transition"
                 >
                   Projects
