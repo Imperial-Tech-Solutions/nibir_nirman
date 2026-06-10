@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
+import navPicture from "../../../assets/nav_picture.png";
 
 
 const ProjectCard = ({ 
@@ -28,7 +29,7 @@ const ProjectCard = ({
         transition={{ duration: 0.6 }}
       >
         <img
-          src={imageUrl || "/api/placeholder/400/320"}
+          src={imageUrl || navPicture}
           alt={title}
           className="w-full h-40 object-cover"
         />

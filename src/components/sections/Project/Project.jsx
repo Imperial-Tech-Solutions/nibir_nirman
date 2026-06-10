@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import data from "../../../assets/JsonFiles/output.json";
+import { getProjectMedia } from "../../../utils/projectMediaAssets";
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -69,7 +70,7 @@ const Projects = () => {
                 <ProjectCard
                   key={project["Sl. No."]}
                   projectId={project["Sl. No."]}
-                  imageUrl="/api/placeholder/400/320"
+                  imageUrl={getProjectMedia(project).cover}
                   title={project.Client}
                   description={project["Project Name"]}
                   contractValue={project["Contract Value"]}
