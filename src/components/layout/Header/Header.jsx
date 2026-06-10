@@ -60,6 +60,8 @@ const Header = () => {
               <img
                 src={logo}
                 alt="Meaningful text"
+                fetchPriority="high"
+                decoding="async"
                 className={`w-auto transition-all duration-300 ${
                   isScrolled ? 'max-h-10' : 'max-h-14'
                 }`}

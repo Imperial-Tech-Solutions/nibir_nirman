@@ -1,18 +1,27 @@
-import React, { useEffect } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { motion } from "motion/react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/layout/Header/Header";
 import Hero from "./components/layout/Hero/Hero";
 import Stats from "./components/sections/Stat/Stats";
 import Services from "./components/sections/Services/Services";
-import Projects from "./components/sections/Project/Project";
-import About from "./components/sections/About/About";
 import Contact from "./components/sections/Contact/Contact";
 import Footer from "./components/layout/Footer/Footer";
 import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 import Discription from "./components/sections/Discription/Discription";
-import IndividualProject from "./components/sections/Project/IndividualProject";
 import { scrollToSection } from "./utils/sectionNavigation";
+
+const About = lazy(() => import("./components/sections/About/About"));
+const Projects = lazy(() => import("./components/sections/Project/Project"));
+const IndividualProject = lazy(() =>
+  import("./components/sections/Project/IndividualProject")
+);
+
+const PageLoader = () => (
+  <div className="min-h-[50vh] bg-gray-100 pt-28 text-center text-gray-600">
+    Loading...
+  </div>
+);
 
 const ScrollToHash = () => {
   const location = useLocation();
@@ -126,12 +135,15 @@ const App = () => {
       <div className="min-h-screen">
         <Header />
         
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<Projects/>} />
-          <Route path="/projectCard/:id" element={<IndividualProject />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/projects" element={<Projects/>} />
+            <Route path="/projects/:id" element={<IndividualProject />} />
+            <Route path="/projectCard/:id" element={<IndividualProject />} />
+          </Routes>
+        </Suspense>
         <Footer />
       </div>
     </BrowserRouter>

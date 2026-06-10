@@ -49,6 +49,9 @@ const Hero = () => {
             <img
               src={slide.url}
               alt={slide.alt}
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>

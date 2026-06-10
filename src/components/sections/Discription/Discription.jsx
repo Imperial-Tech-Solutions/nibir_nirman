@@ -13,6 +13,8 @@ const Discription = () => {
             src={backgroundPattern} 
             className="w-full h-full object-cover opacity-20 mix-blend-multiply filter brightness-150" 
             alt="background pattern" 
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
@@ -30,6 +32,7 @@ const Discription = () => {
   autoPlay 
   loop 
   muted
+  playsInline
 />
 
             </div>

@@ -51,6 +51,8 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="Nibir Nirman Logo"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full object-contain"
                 />
               </a>

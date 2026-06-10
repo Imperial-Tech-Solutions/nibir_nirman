@@ -1,11 +1,11 @@
 import about1 from "../assets/about1.jpg";
 import about2 from "../assets/about2.jpg";
 import navPicture from "../assets/nav_picture.png";
-import s1 from "../assets/s1.jpg";
+import s1 from "../assets/optimized/s1.jpg";
 import s2 from "../assets/s2.jpg";
 import s3 from "../assets/s3.jpg";
 import s4 from "../assets/s4.jpg";
-import s5 from "../assets/s5.jpg";
+import s5 from "../assets/optimized/s5.jpg";
 
 import exsacoBuildingView from "../assets/Projects/exsaco/BuildingView.png";
 import exsacoEntryView from "../assets/Projects/exsaco/Entry View.jpg";
@@ -26,7 +26,7 @@ import towaView2 from "../assets/Projects/towa/464021036_8681394755250832_362059
 import { getProjectMediaFileId, getProjectMediaKey } from "./projectMedia";
 
 const projectImageModules = import.meta.glob(
-  "../assets/imagesForNibirNirman/*.{png,jpg,jpeg,webp}",
+  "../assets/imagesForNibirNirman/optimized/*.{jpg,jpeg,webp}",
   {
     eager: true,
     import: "default",

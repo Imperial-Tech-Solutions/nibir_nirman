@@ -83,6 +83,8 @@ const About = () => {
                 <img
                   src={about1}
                   alt="Construction Project"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full object-cover rounded-lg shadow-lg"
                 />
               </div>
@@ -93,6 +95,8 @@ const About = () => {
                 <img
                   src={about2}
                   alt="Construction Site"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full object-cover rounded-lg shadow-lg"
                 />
               </div>
@@ -131,6 +135,8 @@ const About = () => {
               <img
                 src={leader.image}
                 alt={leader.name}
+                loading="lazy"
+                decoding="async"
                 className="rounded-lg shadow-xl w-full object-cover cursor-pointer"
                 onClick={() => setSelectedLeader(leader)}
               />
@@ -167,6 +173,7 @@ const About = () => {
                       <img
                         src={selectedLeader.image}
                         alt={selectedLeader.name}
+                        decoding="async"
                         className="h-72 w-full object-cover md:h-full"
                       />
                     </div>

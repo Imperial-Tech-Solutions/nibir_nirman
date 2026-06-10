@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../../../assets/JsonFiles/output.json";
 import { getProjectMedia } from "../../../utils/projectMediaAssets";
+import { getProjectCardDetails } from "../../../utils/featuredProjects";
 
 const IndividualProject = () => {
   const { id } = useParams();
@@ -12,6 +13,7 @@ const IndividualProject = () => {
   }
 
   const projectMedia = getProjectMedia(project);
+  const projectDetails = getProjectCardDetails(project);
 
   return (
     <div className="bg-gray-100 font-sans">
@@ -20,6 +22,8 @@ const IndividualProject = () => {
           <img
             src={projectMedia.cover}
             alt={project.Client}
+            fetchPriority="high"
+            decoding="async"
             className="h-[320px] w-full object-cover sm:h-[420px]"
           />
 
@@ -40,11 +44,15 @@ const IndividualProject = () => {
               <h2 className="text-xl font-bold text-gray-900">Project Details</h2>
               <ul className="mt-4 space-y-3 text-gray-700">
                 <li><strong>Client:</strong> {project.Client}</li>
-                <li><strong>Commencement:</strong> {project.Commencement}</li>
-                <li><strong>Completion:</strong> {project.Completion}</li>
+                {projectDetails.commencement && (
+                  <li><strong>Commencement:</strong> {projectDetails.commencement}</li>
+                )}
+                {projectDetails.completion && (
+                  <li><strong>Completion:</strong> {projectDetails.completion}</li>
+                )}
                 <li><strong>Category:</strong> {project.Category}</li>
-                {project["Contract Value"] && (
-                  <li><strong>Contract Value:</strong> {project["Contract Value"]}</li>
+                {projectDetails.contractValue && (
+                  <li><strong>Contract Value:</strong> {projectDetails.contractValue}</li>
                 )}
               </ul>
             </aside>
@@ -59,6 +67,8 @@ const IndividualProject = () => {
                     key={`${project["Sl. No."]}-${index}`}
                     src={imageUrl}
                     alt={`${project.Client} view ${index + 1}`}
+                    loading="lazy"
+                    decoding="async"
                     className="h-52 w-full rounded-2xl object-cover shadow-md"
                   />
                 ))}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import data from "../../../assets/JsonFiles/output.json";
 import { getProjectMedia } from "../../../utils/projectMediaAssets";
+import { getProjectCardDetails } from "../../../utils/featuredProjects";
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -73,9 +74,7 @@ const Projects = () => {
                   imageUrl={getProjectMedia(project).cover}
                   title={project.Client}
                   description={project["Project Name"]}
-                  contractValue={project["Contract Value"]}
-                  commencement={project.Commencement}
-                  completion={project.Completion}
+                  {...getProjectCardDetails(project)}
                 />
               ))}
             </div>
