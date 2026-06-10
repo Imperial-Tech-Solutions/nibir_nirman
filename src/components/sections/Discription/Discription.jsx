@@ -20,8 +20,8 @@ const Discription = () => {
 
         <div className="container mx-auto px-4 pt-16 pb-24 relative">
           <h2 className="text-4xl md:text-6xl lg:text-7xl mb-16 text-center">
-            <span className="text-black font-bold">About</span>{' '}
-            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-gray-500 to-[#60AD02]">Nibir Nirman</span>
+            <span className="text-black font-bold">Sustainabilty. </span>{' '}
+            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-gray-500 to-[#60AD02]">Safety. Reliability</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import data from "../../../assets/JsonFiles/output.json";
+import photo from "../../../assets/toUse.jpg";
 import { getProjectMedia } from "../../../utils/projectMediaAssets";
 import { getProjectCardDetails } from "../../../utils/featuredProjects";
 
@@ -27,7 +28,10 @@ const Projects = () => {
 
   return (
     <>
-      <section className="relative h-screen bg-cover bg-center flex justify-center items-center text-white text-center bg-gray-900">
+      <section 
+        className="relative h-screen bg-cover bg-center flex justify-center items-center text-white text-center" 
+        style={{ backgroundImage: `url(${photo})` }}
+      >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10">
           <p className="text-lg uppercase tracking-wide">View all of our</p>
