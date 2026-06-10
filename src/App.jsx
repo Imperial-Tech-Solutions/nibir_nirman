@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"; // Corrected import for motion
+import { motion } from "motion/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header/Header";
 import Hero from "./components/layout/Hero/Hero";
@@ -9,11 +9,8 @@ import Projects from "./components/sections/Project/Project";
 import About from "./components/sections/About/About";
 import Contact from "./components/sections/Contact/Contact";
 import Footer from "./components/layout/Footer/Footer";
-import AnimatedServices from "./components/sections/AnimatedServices/AnimatedServices";
 import ProjectGrid from "./components/sections/ProjectGrid/ProjectGrid";
 import Discription from "./components/sections/Discription/Discription";
-import ProjectCard from "./components/sections/ProjectCard/ProjectCard";
-import AboutNibirNirman from "./components/sections/About/AboutNibirNirman";
 import IndividualProject from "./components/sections/Project/IndividualProject";
 
 

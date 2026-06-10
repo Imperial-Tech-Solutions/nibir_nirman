@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "motion/react";
 import logo from "../../../assets/header_logo.png";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 

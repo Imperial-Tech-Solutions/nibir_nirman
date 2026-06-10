@@ -4,14 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 
 const ProjectCard = ({ 
-  key,
+  projectId,
   imageUrl, 
   title, // Client Name
   description, // Project Name
   contractValue,
   commencement,
-  completion,
-  onReadMore 
+  completion
 }) => {
   const navigate = useNavigate(); // Ensure this is inside the function component
 
@@ -65,7 +64,7 @@ const ProjectCard = ({
         >
           <div className="pt-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
       <button
-        onClick={() => navigate(`/projectCard/${key}`)}
+        onClick={() => navigate(`/projectCard/${projectId}`)}
         className="block w-full select-none rounded-lg bg-gray-900 py-3 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         type="button"
       >
