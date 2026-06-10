@@ -85,6 +85,7 @@ const Contact = () => {
           <div className="h-[500px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.055635220148!2d90.40223089999999!3d23.781033099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c74b0171f143%3A0xa8a37ccf21f70228!2sNIBIR%20NIRMAN!5e0!3m2!1sen!2sca!4v1733703240909!5m2!1sen!2sca"
+              title="Nibir Nirman office location"
               className="w-full h-full rounded-xl"
               style={{ border: 0 }}
               allowFullScreen

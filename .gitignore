@@ -10,11 +10,21 @@
 *.userosscache
 *.sln.docstates
 
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Mono auto generated files
 mono_crash.*
+
+# Frontend build artifacts
+node_modules/
+build/
+dist/
+.vite/
 
 # Build results
 [Dd]ebug/

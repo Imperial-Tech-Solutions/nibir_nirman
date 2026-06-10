@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import _ from 'lodash';
 import ProjectCard from "../ProjectCard/ProjectCard";
 import data from "../../../assets/JsonFiles/output.json";
-import photo from "../../../assets/toUse.jpg"
+import photo from "../../../assets/toUse.jpg";
+import { getProjectMedia } from "../../../utils/projectMediaAssets";
+import { getProjectCardDetails } from "../../../utils/featuredProjects";
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -11,7 +12,7 @@ const Projects = () => {
 
   useEffect(() => {
     setFilteredProjects(data);
-    const uniqueCategories = _.uniq(data.map(project => project.Category));
+    const uniqueCategories = [...new Set(data.map((project) => project.Category))];
     setCategories(uniqueCategories);
   }, []);
 
@@ -23,10 +24,6 @@ const Projects = () => {
       const filtered = data.filter(project => project.Category === category);
       setFilteredProjects(filtered);
     }
-  };
-
-  const handleReadMore = (project) => {
-    console.log('Read more about:', project["Project Name"]);
   };
 
   return (
@@ -77,13 +74,11 @@ const Projects = () => {
               {filteredProjects.map((project) => (
                 <ProjectCard
                   key={project["Sl. No."]}
-                  imageUrl="/api/placeholder/400/320"
+                  projectId={project["Sl. No."]}
+                  imageUrl={getProjectMedia(project).cover}
                   title={project.Client}
                   description={project["Project Name"]}
-                  contractValue={project["Contract Value"]}
-                  commencement={project.Commencement}
-                  completion={project.Completion}
-                  onReadMore={() => handleReadMore(project)}
+                  {...getProjectCardDetails(project)}
                 />
               ))}
             </div>

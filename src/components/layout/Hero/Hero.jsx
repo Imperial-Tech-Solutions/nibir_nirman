@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 
+const slides = [
+  {
+    url: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Construction Site 1"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Construction Site 2"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Construction Site 3"
+  }
+];
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const slides = [
-    {
-      url: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Construction Site 1"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Construction Site 2"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      alt: "Construction Site 3"
-    }
-  ];
 
   // Scroll to section functionality
   const scrollToSection = (sectionId) => {
@@ -49,6 +49,9 @@ const Hero = () => {
             <img
               src={slide.url}
               alt={slide.alt}
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "low"}
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>
@@ -91,12 +94,13 @@ const Hero = () => {
             >
               About Us
             </button>
-            <a
-              href="/ContactUs.html"
+            <button
+              type="button"
+              onClick={() => scrollToSection("contact")}
               className="bg-white text-[#15803D] px-8 py-3 rounded-lg hover:bg-slate-100 transition-colors"
             >
               Contact Us
-            </a>
+            </button>
           </div>
         </div>
       </div>

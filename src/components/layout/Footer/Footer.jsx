@@ -1,9 +1,33 @@
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../assets/horizontal_logo.png";
+import {
+  getSectionNavigationTarget,
+  scrollToSection,
+} from "../../../utils/sectionNavigation";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    navigate("/");
+  };
+
+  const handleSectionNavigation = (sectionId) => {
+    const navigationTarget = getSectionNavigationTarget(location.pathname, sectionId);
+
+    if (navigationTarget.type === "scroll") {
+      scrollToSection(sectionId);
+      return;
+    }
+
+    navigate(navigationTarget.to);
   };
 
   return (
@@ -27,6 +51,8 @@ const Footer = () => {
                 <img
                   src={logo}
                   alt="Nibir Nirman Logo"
+                  loading="lazy"
+                  decoding="async"
                   className="h-auto w-full object-contain"
                 />
               </a>
@@ -40,28 +66,31 @@ const Footer = () => {
             <nav className="mb-2">
               <ul className="flex flex-wrap justify-center gap-8 py-2">
                 <li>
-                  <a
-                    href="#"
+                  <button
+                    type="button"
+                    onClick={() => navigate("/about")}
                     className="text-lg font-medium text-gray-700 transition-colors hover:text-[#60AD02] focus:outline-none focus:ring-2 focus:ring-[#60AD02] focus:ring-offset-2 px-4 py-2"
                   >
                     About
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <button
+                    type="button"
+                    onClick={() => handleSectionNavigation("services")}
                     className="text-lg font-medium text-gray-700 transition-colors hover:text-[#60AD02] focus:outline-none focus:ring-2 focus:ring-[#60AD02] focus:ring-offset-2 px-4 py-2"
                   >
                     Services
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <button
+                    type="button"
+                    onClick={() => navigate("/projects")}
                     className="text-lg font-medium text-gray-700 transition-colors hover:text-[#60AD02] focus:outline-none focus:ring-2 focus:ring-[#60AD02] focus:ring-offset-2 px-4 py-2"
                   >
                     Projects
-                  </a>
+                  </button>
                 </li>
               </ul>
             </nav>
