@@ -46,7 +46,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 font-ibm-plex-serif">Phone</h3>
-                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">+1 (555) 123-4567</p>
+                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">+88 02 41081688</p>
                 </div>
               </div>
 
@@ -59,7 +59,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 font-ibm-plex-serif">Email</h3>
-                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">contact@yourcompany.com</p>
+                  <p className="text-base text-gray-600 mt-1 font-roboto-serif">info@nibirnirman.com <br /> nibirnirman@gmail.com
+                  </p>
                 </div>
               </div>
 
@@ -73,8 +74,7 @@ const Contact = () => {
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 font-ibm-plex-serif">Business Hours</h3>
                   <p className="text-base text-gray-600 mt-1 font-roboto-serif">
-                    Monday - Friday: 9:00 AM - 6:00 PM<br />
-                    Saturday: 10:00 AM - 2:00 PM
+                    Saturday - Thursday: <br />10:00am - 5:00pm<br />
                   </p>
                 </div>
               </div>
