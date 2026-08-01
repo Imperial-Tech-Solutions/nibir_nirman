@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "motion/react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import navPicture from "../../../assets/nav_picture.png";
 
 
@@ -19,7 +19,7 @@ const ProjectCard = ({
 
   return (
     <motion.div
-      className="group flex flex-col h-80 w-full bg-white rounded-xl shadow-lg overflow-hidden hover:h-auto transition-all duration-500"
+      className="project-card group flex h-auto w-full flex-col overflow-hidden rounded-xl bg-white shadow-lg transition-all duration-500"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 200, damping: 25, duration: 0.6 }}
@@ -47,8 +47,8 @@ const ProjectCard = ({
             {title}
           </h5>
           {/* Description and Details only visible on hover */}
-          <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-500 ease-in-out">
-            <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+          <div className="project-card-details-shell h-auto overflow-hidden transition-all duration-500 ease-in-out">
+            <div className="project-card-details space-y-2 opacity-100 transition-opacity duration-500 ease-in-out">
               <p className="block font-sans text-base antialiased font-medium leading-relaxed text-gray-800">
                 {description}
               </p>
@@ -69,9 +69,9 @@ const ProjectCard = ({
 
         {/* Button only visible on hover */}
         <motion.div
-          className="hidden group-hover:block"
+          className="project-card-action block"
         >
-          <div className="pt-4 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out">
+          <div className="project-card-action-inner translate-y-0 pt-4 opacity-100 transition-all duration-500 ease-in-out">
       <button
         onClick={() => navigate(`/projects/${projectId}`)}
         className="block w-full select-none rounded-lg bg-gray-900 py-3 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"

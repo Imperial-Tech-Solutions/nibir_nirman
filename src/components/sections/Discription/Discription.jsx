@@ -28,7 +28,7 @@ const Discription = () => {
             <div className="relative z-10">
             <video 
   src="https://github.com/Imperial-Tech-Solutions/nibir_nirman/releases/download/videos/output.mp4"
-  className="w-full rounded-lg shadow-xl" 
+  className="aspect-video w-full rounded-lg object-cover shadow-xl"
   autoPlay 
   loop 
   muted

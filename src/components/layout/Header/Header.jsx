@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router";
 import logo from "../../../assets/header_logo.png";
 import {
   getSectionNavigationTarget,
@@ -51,7 +51,7 @@ const Header = () => {
         isScrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-screen-xl px-3 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-300 ${
           isScrolled ? 'h-14' : 'h-20'
         }`}>
@@ -59,11 +59,11 @@ const Header = () => {
             <Link className="block text-teal-600" to="/">
               <img
                 src={logo}
-                alt="Meaningful text"
+                alt="Nibir Nirman home"
                 fetchPriority="high"
                 decoding="async"
                 className={`w-auto transition-all duration-300 ${
-                  isScrolled ? 'max-h-10' : 'max-h-14'
+                  isScrolled ? 'max-h-9 sm:max-h-10' : 'max-h-11 sm:max-h-14'
                 }`}
               />
             </Link>
@@ -102,14 +102,14 @@ const Header = () => {
             </nav>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 sm:gap-6">
             <div className="sm:flex sm:gap-4">
               <button
                 onClick={() => handleSectionNavigation("contact")}
-                className={`rounded bg-[#15803D] text-sm font-medium text-white shadow hover:bg-[#166534] focus:outline-none focus:ring active:bg-[#14532D] transition-all duration-300 ${
+                className={`whitespace-nowrap rounded bg-[#15803D] text-sm font-medium text-white shadow hover:bg-[#166534] focus:outline-none focus:ring active:bg-[#14532D] transition-all duration-300 ${
                   isScrolled 
-                    ? 'px-8 py-2' 
-                    : 'px-12 py-3'
+                    ? 'px-4 py-2 sm:px-8'
+                    : 'px-4 py-3 sm:px-12'
                 }`}
               >
                 Contact Us
@@ -121,6 +121,7 @@ const Header = () => {
                 className="rounded bg-[#15803D] p-2 text-white transition hover:bg-[#166534]"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle mobile menu"
+                aria-expanded={isMobileMenuOpen}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

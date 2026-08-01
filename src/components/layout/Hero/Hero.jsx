@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
 
 const slides = [
   {
@@ -16,6 +17,7 @@ const slides = [
 ];
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Scroll to section functionality
@@ -36,7 +38,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-screen">
+    <section className="relative min-h-[100svh]">
       <div id="carousel" className="absolute inset-0">
         {/* Carousel slides */}
         {slides.map((slide, index) => (
@@ -75,29 +77,29 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
-      <div className="relative container mx-auto px-6 h-full flex items-center">
+      <div className="relative container mx-auto flex min-h-[100svh] items-center px-5 pb-14 pt-24 sm:px-6 sm:pt-20">
         <div className="text-white max-w-2xl">
-          <h1 className="text-5xl font-bold mb-6">
+          <h1 className="mb-5 text-4xl font-bold leading-tight sm:mb-6 sm:text-5xl">
             If You Can Dream It{" "}
             <strong className="block" style={{ color: "#60AD02" }}>
               We Can Build it.
             </strong>
           </h1>
-          <p className="text-xl mb-8">
+          <p className="mb-6 text-lg leading-relaxed sm:mb-8 sm:text-xl">
             Building Excellence, Shaping Futures: Nibir Nirman – Your Trusted
             Partner in Quality Construction Since 1997.
           </p>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
             <button
-              onClick={() => scrollToSection("about")}
-              className="bg-[#15803D] text-white px-8 py-3 rounded-lg hover:bg-[#166534] transition-colors"
+              onClick={() => navigate("/about")}
+              className="flex-1 whitespace-nowrap rounded-lg bg-[#15803D] px-5 py-3 text-white transition-colors hover:bg-[#166534] sm:flex-none sm:px-8"
             >
               About Us
             </button>
             <button
               type="button"
               onClick={() => scrollToSection("contact")}
-              className="bg-white text-[#15803D] px-8 py-3 rounded-lg hover:bg-slate-100 transition-colors"
+              className="flex-1 whitespace-nowrap rounded-lg bg-white px-5 py-3 text-[#15803D] transition-colors hover:bg-slate-100 sm:flex-none sm:px-8"
             >
               Contact Us
             </button>

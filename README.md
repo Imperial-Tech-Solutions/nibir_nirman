@@ -4,7 +4,7 @@ Official website for Nibir Nirman, a construction company based in Bangladesh. B
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) v18 or higher
+- [Node.js](https://nodejs.org/) v22.22 or higher
 - npm (comes with Node.js)
 
 ## Installation

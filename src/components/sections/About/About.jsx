@@ -54,7 +54,7 @@ const About = () => {
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative flex items-end h-full pb-8">
-          <h1 className="text-white text-5xl font-bold ml-6">
+          <h1 className="ml-4 text-4xl font-bold text-white sm:ml-6 sm:text-5xl">
             About Nibir Nirman
           </h1>
         </div>
@@ -64,7 +64,7 @@ const About = () => {
       <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <header className="mb-12">
-            <h2 className="text-5xl font-extrabold text-gray-800 border-b-4 border-[#15803D] inline-block pb-2">
+            <h2 className="inline-block border-b-4 border-[#15803D] pb-2 text-4xl font-extrabold text-gray-800 sm:text-5xl">
               Our Story
             </h2>
           </header>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router";
 import logo from "../../../assets/horizontal_logo.png";
 import {
   getSectionNavigationTarget,
@@ -32,9 +32,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-100 font-roboto">
-      <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-      `}</style>
       <div className="mx-auto max-w-screen-xl px-4 py-6 sm:px-6 lg:px-8 relative">
         <div className="grid gap-4 lg:grid-cols-2 lg:gap-16">
           {/* Logo and tagline */}

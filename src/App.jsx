@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useEffect } from "react";
 import { motion } from "motion/react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router";
 import Header from "./components/layout/Header/Header";
 import Hero from "./components/layout/Hero/Hero";
 import Stats from "./components/sections/Stat/Stats";
@@ -73,7 +73,7 @@ const Home = () => {
           </motion.div>
         </div>
 
-        <div id="projects">
+        <div id="projects" className="scroll-mt-20">
           <motion.div
             initial={{ opacity: 0, transform: "translateY(20px)" }}
             whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -84,7 +84,7 @@ const Home = () => {
           </motion.div>
         </div>
 
-        <div id="services">
+        <div id="services" className="scroll-mt-20">
           <motion.div
             initial={{ opacity: 0, transform: "translateY(20px)" }}
             whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -95,7 +95,7 @@ const Home = () => {
           </motion.div>
         </div>
 
-        <div id="contact">
+        <div id="contact" className="scroll-mt-20">
           <motion.div
             initial={{ opacity: 0, transform: "translateY(20px)" }}
             whileInView={{ opacity: 1, transform: "translateY(0)" }}
@@ -113,18 +113,9 @@ const Home = () => {
 // About page component
 const AboutPage = () => {
   return (
-    <>
-      <div id="about">
-        <motion.div
-          initial={{ opacity: 0, transform: "translateY(20px)" }}
-          whileInView={{ opacity: 1, transform: "translateY(0)" }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 1.2 }}
-        >
-          <About />
-        </motion.div>
-      </div>
-    </>
+    <div id="about" className="scroll-mt-20">
+      <About />
+    </div>
   );
 };
 

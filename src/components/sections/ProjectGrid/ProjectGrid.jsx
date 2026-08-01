@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import data from "../../../assets/JsonFiles/output.json";
 import { getProjectMedia } from "../../../utils/projectMediaAssets";

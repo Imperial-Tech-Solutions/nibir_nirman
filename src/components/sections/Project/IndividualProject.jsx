@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import projectsData from "../../../assets/JsonFiles/output.json";
 import { getProjectMedia } from "../../../utils/projectMediaAssets";
 import { getProjectCardDetails } from "../../../utils/featuredProjects";
